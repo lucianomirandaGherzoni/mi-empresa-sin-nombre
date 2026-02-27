@@ -1,0 +1,305 @@
+/* Dropdown para Productos */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown .nav-text {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background: rgba(0, 0, 0, 0.95);
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  padding: 0.5rem 0;
+  z-index: 100;
+}
+
+.nav-dropdown:hover .dropdown-content,
+.nav-dropdown:focus-within .dropdown-content {
+  display: block;
+}
+
+.dropdown-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--muted-foreground);
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-link:hover {
+  background: var(--secondary);
+  color: #fff;
+}
+
+/* src/components/Navbar/Navbar.css */
+
+/* Definimos el color Lime localmente por si acaso */
+:root {
+  --lime: #B5A2D2;
+  --lime-dark: #5C2DBF;
+}
+
+/* Contenedor fijo arriba */
+.navbar-fixed {
+  position: fixed;
+  top: 0.75rem;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 50;
+  width: calc(100% - 1.5rem);
+  max-width: 62rem;
+  /* más ancho para todos los items */
+}
+
+/* La barra de navegación en sí ("pastilla") */
+.navbar-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-radius: 9999px;
+  /* full rounded */
+
+  /* Glassmorphism */
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-secondary);
+  
+  /* Usa variable de index.css */
+}
+
+
+/* Logo */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.logo-mobile {
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+.logo-icon {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--lime-dark);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon span {
+  color: #fff;
+  font-weight: bold;
+  background: transparent;
+}
+
+.logo-text {
+  font-weight: 600;
+  color: #fff;
+  display: none;
+  /* Oculto en móvil por defecto */
+}
+
+@media (min-width: 640px) {
+  .logo-text {
+    display: block;
+  }
+}
+
+/* Navegación Desktop */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  position: relative;
+  
+}
+
+.nav-link {
+  position: relative;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  color: #fff;
+  text-transform: uppercase;
+  transition: color 0.2s;
+  text-decoration: none;
+  
+}
+
+.nav-link:hover {
+  color: var(--lime);
+}
+
+.nav-text {
+  position: relative;
+  z-index: 10;
+  /* Para que esté sobre el fondo animado */
+}
+
+/* El fondo animado (la "pastilla" gris al hacer hover) */
+.nav-hover-bg {
+  position: absolute;
+  inset: 0;
+  background-color: var(--secondary);
+  /* Gris claro */
+  border-radius: 9999px;
+  z-index: 0;
+}
+
+/* Botones y Acciones */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Clases base para botones */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+
+/* Variante Ghost (transparente) */
+.btn-ghost {
+  background: transparent;
+  color: var(--muted-foreground);
+}
+
+.btn-ghost:hover {
+  color: #fff;
+  background-color: var(--secondary);
+}
+
+/* Variante Primary (Lime) */
+.btn-primary {
+  background-color: var(--lime);
+  color: #000;
+  /* Texto negro para contraste */
+}
+
+.btn-primary:hover {
+  background-color: var(--lime-dark);
+}
+
+/* Mobile Toggle */
+.mobile-toggle-btn {
+  display: block;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.mobile-toggle-btn:hover {
+  color: #fff;
+}
+
+/* Utilidades de visibilidad */
+.desktop-only {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .desktop-only {
+    display: flex;
+  }
+
+  .mobile-toggle-btn {
+    display: none;
+  }
+}
+
+/* --- Menú Móvil --- */
+.mobile-menu-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+
+  /* Glassmorphism oscuro */
+  background-color: rgba(9, 9, 11, 0.95);
+  /* Casi negro opaco */
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-secondary);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobile-nav-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.mobile-nav-heading {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #a1a1aa;
+  padding: 0.25rem 0.25rem 0.1rem;
+}
+
+.mobile-nav-link {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  font-family: var(--font-display);
+}
+
+.mobile-nav-link:hover {
+  color: var(--lime);
+  background-color: var(--secondary);
+}
+
+.divider {
+  height: 1px;
+  background-color: #fff;
+  margin: 0.5rem 0;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.text-left {
+  text-align: left;
+  justify-content: flex-start;
+}

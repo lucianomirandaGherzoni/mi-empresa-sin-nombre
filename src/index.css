@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Syne:wght@400..800&display=swap');
+
+:root {
+  /* --- Material Design 3: Tokens globales --- */
+  --color-base: #303231;         /* Gris oscuro para texto principal */
+  --color-primary: #FF4600;      /* Naranja vibrante para CTA */
+  --color-secondary: #C4A6F0;    /* Lila suave para fondos/acento */
+  --color-bg: #FFFFFF;           /* Fondo blanco/neutro */
+  --radius: 1.5rem;              /* Bordes redondeados (24px) */
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+
+/* --- RESET GLOBAL (Para que todo se vea igual) --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-color: #fff;
+}
+
+body {
+      /* Siempre Blanco */
+  font-family: var(--font-body);
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased; /* Hace que la letra se vea más fina y elegante */
+}
+html, body {
+  overflow-x: hidden;
+}
+
+/* Enlaces y botones */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit; /* Que usen la misma letra que la web */
+}
+
+/* Imágenes responsive */
+img, svg {
+  display: block;
+  max-width: 100%;
+}

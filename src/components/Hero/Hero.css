@@ -1,0 +1,197 @@
+/* ==========================================================================
+   HEROE - CONTENEDOR PRINCIPAL
+   ========================================================================== */
+.seccion-heroe {
+    position: relative;
+    min-height: 85vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 1rem 4rem;
+    overflow: hidden;
+    text-align: center;
+    background-color: #000;
+}
+
+.contenedor-heroe {
+    position: relative;
+    z-index: 10;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fondo-gradiente {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    background-color: #0d0d0d;
+    background-image: radial-gradient(100% 60% at 50% 10%, rgba(181, 162, 210, 0.13) 0%, rgba(181, 162, 210, 0) 50%, rgba(181, 162, 210, 0) 100%);
+}
+
+.grid-corner {
+    position: absolute;
+    bottom: 0; /* Lo anclamos abajo */
+    left: 0; 
+    width: 100%; /* Que ocupe todo el ancho */
+    height: 60%; /* Hasta un poco más de la mitad de alto */
+    z-index: 1;
+    pointer-events: none;
+    
+    background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 50px 40px;
+    
+    /* El difuminado ahora nace fuerte desde el centro-abajo (50% 100%) y se desvanece hacia arriba */
+    -webkit-mask-image: radial-gradient(ellipse 80% 100% at 50% 100%, black 20%, transparent 80%);
+    mask-image: radial-gradient(ellipse 80% 100% at 50% 100%, black 20%, transparent 80%);
+}
+/* ==========================================================================
+   TIPOGRAFÍA Y ESTILOS DE TEXTO
+   ========================================================================== */
+.frase-hero-animada {
+    font-size: 1.8rem;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    background: linear-gradient(90deg, #f5f5f5 0%, #B5A2D2 30%, #cccccc 60%, #444 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    letter-spacing: -0.03em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    min-height: 1.2em;
+    padding-bottom: 0.2em;
+    transition: opacity 0.6s;
+    font-family: var(--font-display);
+}
+
+.titulo-principal {
+    font-size: 1.8rem;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: #fff;
+    margin-bottom: 1.2rem;
+}
+
+.titulo-negocio {
+    font-weight: 000;
+    line-height: 1.1;
+    font-family: var(--font-display);
+}
+
+.mascara-texto {
+    display: block;
+    overflow: hidden;
+    padding-bottom: 0.2em;
+}
+
+.bloque {
+    display: block;
+}
+
+.descripcion-heroe {
+    font-size: .9rem;
+    color: #a1a1aa;
+    max-width: 30rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    text-transform: uppercase;
+    font-family: var(--font-display);
+}
+
+.startup-centro {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    color: #bdbdbd;
+    max-width: 100vw;
+    margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   BOTONES
+   ========================================================================== */
+.grupo-botones {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    max-width: 400px;
+    min-width: fit-content;
+}
+
+.boton-heroe {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    font-weight: 300;
+    transition: all 0.2s;
+    cursor: pointer;
+    height: 2.5rem;
+    padding: 0 2rem;
+    font-size: .6rem;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+}
+
+.boton-heroe.primario {
+    background-color: #B5A2D2;
+    color: #000;
+}
+
+.boton-heroe.contorno {
+    background: transparent;
+    border-color: var(--color-secondary);
+    color: #fff;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+@media (min-width: 768px) {
+    .frase-hero-animada {
+        font-size: 2.2rem;
+    }
+
+    .titulo-principal {
+        font-size: 3.2rem;
+        line-height: 1.22;
+    }
+
+    .descripcion-heroe {
+        font-size: 1rem;
+        max-width: 42rem;
+        margin-bottom: 2rem;
+    }
+
+    .grupo-botones {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .frase-hero-animada {
+        font-weight: 600;
+        font-size: 3.5rem;
+    }
+
+    .titulo-principal {
+        font-size: 4rem;
+        font-weight: 100;
+        line-height: 1.18;
+    }
+}

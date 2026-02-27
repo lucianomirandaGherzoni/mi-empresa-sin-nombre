@@ -1,0 +1,134 @@
+/* ==========================================================================
+   PREGUNTAS FRECUENTES - ESTILOS BASE (MOBILE FIRST)
+   ========================================================================== */
+
+.seccion-preguntas-frecuentes {
+    padding: 5rem 1.5rem;
+    background-color: #000;
+}
+
+.contenedor-faq-profesional {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.cabecera-faq-estilo {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.cabecera-faq-estilo .etiqueta-seccion {
+    margin-bottom: 0.75rem;
+}
+
+.titulo-seccion-faq {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.3;
+    letter-spacing: -0.03em;
+    font-family: var(--font-display);
+}
+
+/* --- LISTADO --- */
+.lista-desplegable-faq {
+    border-top: 1px solid #1a1a1a;
+}
+
+.contenedor-item-faq {
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.boton-desplegable-faq {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.texto-pregunta-faq {
+    font-size: 0.95rem;
+    color: #eee;
+    font-weight: 500;
+    padding-right: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.boton-desplegable-faq:hover .texto-pregunta-faq {
+    color: #B5A2D2;
+}
+
+/* --- ICONOS --- */
+.circulo-icono-faq {
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 1px solid #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.boton-desplegable-faq:hover .circulo-icono-faq {
+    border-color: rgba(190, 242, 100, 0.4);
+}
+
+.icono-faq-verde {
+    width: 1rem; height: 1rem;
+    color: #B5A2D2;
+}
+
+.icono-faq-gris {
+    width: 1rem; height: 1rem;
+    color: #71717a;
+}
+
+/* --- RESPUESTA --- */
+.zona-respuesta-animada {
+    overflow: hidden;
+}
+
+.parrafo-respuesta-faq {
+    font-size: 0.875rem;
+    color: #71717a;
+    line-height: 1.6;
+    padding-bottom: 1.5rem;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (ESCALABILIDAD CENTRALIZADA)
+   ========================================================================== */
+
+/* TABLET (768px+) */
+@media (min-width: 768px) {
+    .contenedor-faq-profesional {
+        max-width: 48rem; /* max-w-3xl */
+    }
+
+    .titulo-seccion-faq {
+        font-size: 2.4rem;
+    }
+
+    .texto-pregunta-faq {
+        font-size: 1.1rem;
+    }
+
+    .parrafo-respuesta-faq {
+        font-size: 0.95rem;
+    }
+}
+
+/* DESKTOP (1024px+) */
+@media (min-width: 1024px) {
+    .seccion-preguntas-frecuentes {
+        padding: 8rem 2rem;
+    }
+}

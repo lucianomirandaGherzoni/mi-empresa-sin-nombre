@@ -1,0 +1,149 @@
+.seccion-quienes-somos {
+  position: relative;
+  padding: 5rem 1.5rem;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.quienes-fondo-gradiente {
+  position: absolute;
+  inset: 0;
+  background-color: #050509;
+  background-image: radial-gradient(100% 80% at 50% 0%, rgba(181, 162, 210, 0.2) 0%, rgba(181, 162, 210, 0) 40%);
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.quienes-grid-fondo {
+  position: absolute;
+  inset: auto 0 0;
+  height: 70%;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 50px 40px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 100% at 50% 100%, black 20%, transparent 80%);
+  mask-image: radial-gradient(ellipse 80% 100% at 50% 100%, black 20%, transparent 80%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.contenedor-quienes-somos {
+  position: relative;
+  z-index: 5;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cabecera-quienes-somos {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3.5rem;
+}
+
+.etiqueta-seccion {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #b5a2d2;
+  background: transparent;
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+.titulo-quienes-somos {
+  margin-top: 1.25rem;
+  font-size: clamp(2.2rem, 3vw, 2.6rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  color: #f5f5f5;
+  font-family: var(--font-display);
+}
+
+.descripcion-quienes-somos {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #a1a1aa;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid-quienes-somos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.tarjeta-quienes {
+  border-radius: 1.75rem;
+  padding: 2rem 1.75rem;
+  background-color: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.8),
+    0 0 0 1px rgba(15, 23, 42, 0.9);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tarjeta-quienes::before {
+  content: '';
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(circle at top left, rgba(181, 162, 210, 0.28), transparent 55%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.tarjeta-quienes:hover {
+  border-color: var(--color-secondary);
+  transform: translateY(-6px);
+}
+
+.tarjeta-quienes:hover::before {
+  opacity: 1;
+}
+
+.tarjeta-quienes h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #e5e7eb;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.tarjeta-quienes p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #9ca3af;
+}
+
+@media (max-width: 900px) {
+  .grid-quienes-somos {
+    grid-template-columns: 1fr;
+  }
+
+  .seccion-quienes-somos {
+    padding: 4.5rem 1.25rem;
+  }
+
+  .cabecera-quienes-somos {
+    text-align: left;
+  }
+
+  .descripcion-quienes-somos {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
