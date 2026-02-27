@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
 // --- COMPONENTES GLOBALES ---
-import { Navbar } from './components/Navbar/Navbar.jsx';
+import { Navbar } from './components/Navbar/NavBar.jsx';
 import { Hero } from './components/Hero/Hero.jsx';
 import { LogoMarquee } from './components/LogoMarquee/LogoMarquee.jsx';
 import { QuienesSomos } from './components/QuienesSomos/QuienesSomos.jsx';
