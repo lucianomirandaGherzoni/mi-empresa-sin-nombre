@@ -20,7 +20,7 @@ const navItems = [
   { label: "FAQ", href: "/#faq" },
 ];
 
-export function Navbar() {
+export function NavBar() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
