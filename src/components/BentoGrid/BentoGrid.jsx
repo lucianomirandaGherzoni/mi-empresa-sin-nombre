@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { Link } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 import { Layout, Mail, Calendar, UtensilsCrossed, Code2, ArrowUpRight } from "lucide-react";
 import "./BentoGrid.css";
@@ -167,62 +168,62 @@ export function BentoGrid() {
         >
           {/* 1. Landing Pages (Ancho Completo) */}
           <motion.div variants={variantes} className="tarjeta-bento ancho-completo tarjeta-acento">
-            <a href="/landing-pages" className="enlace-tarjeta">
+            <Link to="/landing-pages" className="enlace-tarjeta" onClick={() => window.scrollTo(0, 0)}>
               <div className="info-tarjeta">
                 <div className="titulo-header"><Layout className="icono-lime" /><h3>Landing Pages</h3></div>
                 <p>Presencia profesional que convierte visitas en clientes.</p>
                 <ArrowUpRight className="flecha-link" />
               </div>
               <div className="contenedor-visual"><InterfazLanding /></div>
-            </a>
+            </Link>
           </motion.div>
 
           {/* 2. Invitaciones */}
           <motion.div variants={variantes} className="tarjeta-bento">
-            <a href="/invitaciones" className="enlace-tarjeta">
+            <Link to="/invitaciones" className="enlace-tarjeta" onClick={() => window.scrollTo(0, 0)}>
               <div className="info-tarjeta">
                 <div className="titulo-header"><Mail className="icono-lime" /><h3>Invitaciones</h3></div>
                 <p>Eventos memorables.</p>
                 <ArrowUpRight className="flecha-link" />
               </div>
               <div className="contenedor-visual"><InterfazInvitacion /></div>
-            </a>
+            </Link>
           </motion.div>
 
           {/* 3. Turnos */}
           <motion.div variants={variantes} className="tarjeta-bento">
-            <a href="/turnos" className="enlace-tarjeta">
+            <Link to="/turnos" className="enlace-tarjeta" onClick={() => window.scrollTo(0, 0)}>
               <div className="info-tarjeta">
                 <div className="titulo-header"><Calendar className="icono-lime" /><h3>Turnos</h3></div>
                 <p>Agenda automática.</p>
                 <ArrowUpRight className="flecha-link" />
               </div>
               <div className="contenedor-visual"><InterfazCalendario /></div>
-            </a>
+            </Link>
           </motion.div>
 
           {/* 4. Menú QR */}
           <motion.div variants={variantes} className="tarjeta-bento">
-            <a href="/cartas" className="enlace-tarjeta">
+            <Link to="/cartas" className="enlace-tarjeta" onClick={() => window.scrollTo(0, 0)}>
               <div className="info-tarjeta">
                 <div className="titulo-header"><UtensilsCrossed className="icono-lime" /><h3>Menú QR</h3></div>
                 <p>Actualiza precios ya.</p>
                 <ArrowUpRight className="flecha-link" />
               </div>
               <div className="contenedor-visual"><InterfazMenu /></div>
-            </a>
+            </Link>
           </motion.div>
 
           {/* 5. Desarrollo a Medida */}
           <motion.div variants={variantes} className="tarjeta-bento">
-            <a href="/desarrollo" className="enlace-tarjeta">
+            <Link to="/desarrollo" className="enlace-tarjeta" onClick={() => window.scrollTo(0, 0)}>
               <div className="info-tarjeta">
                 <div className="titulo-header"><Code2 className="icono-lime" /><h3>A Medida</h3></div>
                 <p>Sistemas complejos.</p>
                 <ArrowUpRight className="flecha-link" />
               </div>
               <div className="contenedor-visual"><InterfazDesarrollo /></div>
-            </a>
+            </Link>
           </motion.div>
 
         </motion.div>

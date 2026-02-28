@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
 import "./NavBar.css";
@@ -44,7 +45,7 @@ export function NavBar() {
       <nav className="navbar-container">
         {/* Logo */}
        
-        <a href="./" className="logo-mobile"> Origen digital</a>
+        <Link to="/" className="logo-mobile"> Origen digital</Link>
 
         {/* Desktop Nav Items */}
         <div className="nav-links desktop-only">
@@ -54,16 +55,16 @@ export function NavBar() {
                 <span className="nav-text">{item.label}</span>
                 <div className="dropdown-content">
                   {item.dropdown.map((dropItem) => (
-                    <a key={dropItem.label} href={dropItem.href} className="dropdown-link">
+                    <Link key={dropItem.label} to={dropItem.href} className="dropdown-link">
                       {dropItem.label}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
             ) : item.href ? (
-              <a
+              <Link
                 key={item.label}
-                href={item.href}
+                to={item.href}
                 className="nav-link"
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
@@ -77,7 +78,7 @@ export function NavBar() {
                   />
                 )}
                 <span className="nav-text">{item.label}</span>
-              </a>
+              </Link>
             ) : (
               <span key={item.label} className="nav-link nav-text">{item.label}</span>
             )
@@ -146,9 +147,9 @@ export function NavBar() {
                       }}
                     >
                       {item.dropdown.map((dropItem) => (
-                        <a
+                        <Link
                           key={dropItem.label}
-                          href={dropItem.href}
+                          to={dropItem.href}
                           className="mobile-nav-link"
                           style={{
                             display: 'block',
@@ -160,20 +161,20 @@ export function NavBar() {
                           onClick={() => setMobileMenuOpen(false)}
                         >
                           {dropItem.label}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   )}
                 </div>
               ) : (
-                <a
+                <Link
                   key={item.label}
-                  href={item.href}
+                  to={item.href}
                   className="mobile-nav-link"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}
-                </a>
+                </Link>
               )
             )}
             <div className="divider" />
