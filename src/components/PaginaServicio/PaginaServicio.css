@@ -265,6 +265,18 @@
 /* ==========================================================================
    MEDIA QUERIES (ESCALABILIDAD)
    ========================================================================== */
+
+/* MÓVILES */
+@media (max-width: 767px) {
+    .grilla-hero {
+        text-align: left;
+    }
+    
+    .encabezado-centro {
+        text-align: left;
+    }
+}
+
 @media (min-width: 768px) {
     .grilla-planes { grid-template-columns: repeat(2, 1fr); }
     .acciones-hero { flex-direction: row; }

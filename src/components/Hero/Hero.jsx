@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
 import { LogoMarquee } from '../LogoMarquee/LogoMarquee.jsx';
 import './Hero.css';
 
@@ -67,6 +68,23 @@ export function Hero() {
                     </button>
                 </motion.div>
             </div>
+            
+            {/* Scroll Indicator - Solo móviles */}
+            <motion.button
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                className="scroll-indicator"
+                onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
+                aria-label="Desplazar hacia abajo"
+            >
+                <motion.div
+                    animate={{ y: [0, 8, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                >
+                    <ChevronDown size={28} />
+                </motion.div>
+            </motion.button>
             
             {/* LogoMarquee integrado */}
             <LogoMarquee />

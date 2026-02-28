@@ -148,40 +148,6 @@
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {
   .marquee-section {
-    padding: 1rem 0 2rem 0;
-  }
-
-  .marquee-header {
-    margin-bottom: 1rem;
-  }
-
-  .marquee-header p {
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
-  }
-
-  .marquee-container {
-    max-width: 100%;
-  }
-
-  /* Fades más angostos en móvil */
-  .marquee-fade {
-    width: 2rem;
-  }
-
-  /* Logos más pequeños y menos espacio */
-  .logo-item {
-    min-width: 100px;
-    margin: 0 0.75rem;
-    height: 2.5rem;
-  }
-
-  .logo-text {
-    font-size: 0.75rem;
-  }
-
-  /* Animación más rápida en móvil */
-  .marquee-track {
-    animation: scroll-infinite 50s linear infinite;
+    display: none;
   }
 }
