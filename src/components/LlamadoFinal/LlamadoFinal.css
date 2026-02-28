@@ -14,8 +14,8 @@
 
 .seccion-llamado {
     padding: 6rem 1rem;
-        background-color: #0d0d0d; /* Fondo gris oscuro ya establecido */
-    border-top: 1px solid #1a1a1a; /* Separador sutil superior */
+    background-color: var(--bg-dark-2);
+    border-top: 1px solid var(--border-dark-1);
 }
 
 .contenedor-llamado {
@@ -30,17 +30,17 @@
 }
 
 .titulo-llamado {
-    font-size: 2.25rem; /* ~36px */
+    font-size: 2.25rem;
     font-weight: 700;
-    color: #fff;
+    color: var(--text-white);
     margin-bottom: 1.5rem;
     line-height: 1.1;
     letter-spacing: -0.02em;
 }
 
 .descripcion-llamado {
-    font-size: 1.125rem; /* ~18px */
-    color: #a1a1aa; /* Gris intermedio */
+    font-size: 1.125rem;
+    color: var(--text-gray);
     margin-bottom: 2.5rem;
     line-height: 1.6;
     max-width: 600px;
@@ -62,38 +62,38 @@
     justify-content: center;
     height: 3.5rem;
     padding: 0 2rem;
-    border-radius: 9999px;
+    border-radius: var(--radius-full);
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 100%; /* Ancho completo en móvil */
+    width: 100%;
     border: 1px solid transparent;
 }
 
-/* Botón Primario (Lima) */
+/* Botón Primario */
 .boton-llamado.primario {
-    background-color: #B5A2D2;
-    color: #000;
+    background-color: var(--color-secondary);
+    color: var(--text-black);
     box-shadow: 0 4px 20px rgba(190, 242, 100, 0.2);
 }
 
 .boton-llamado.primario:hover {
-    background-color: #5C2DBF;
+    background-color: var(--color-secondary-dark);
     transform: translateY(-2px);
 }
 
 /* Botón Secundario (Borde) */
 .boton-llamado.secundario {
     background-color: transparent;
-    border-color: #27272a;
-    color: #d4d4d8;
+    border-color: var(--border-dark-2);
+    color: var(--text-gray-light);
 }
 
 .boton-llamado.secundario:hover {
-    background-color: #18181b;
-    border-color: #3f3f46;
-    color: #fff;
+    background-color: var(--bg-dark-4);
+    border-color: var(--border-dark-3);
+    color: var(--text-white);
 }
 
 .icono-flecha {
@@ -141,6 +141,13 @@
 /* ==========================================================================
    MEDIA QUERIES (TABLET Y ESCRITORIO)
    ========================================================================== */
+
+/* MÓVILES */
+@media (max-width: 639px) {
+    .contenedor-llamado {
+        text-align: left;
+    }
+}
 
 @media (min-width: 640px) {
     .grupo-botones-llamado {

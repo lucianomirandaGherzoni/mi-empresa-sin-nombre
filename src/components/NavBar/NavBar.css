@@ -13,8 +13,8 @@
   top: 100%;
   left: 0;
   min-width: 200px;
-  background: rgba(0, 0, 0, 0.95);
-  border-radius: 0.75rem;
+  background: var(--overlay-dark-strong);
+  border-radius: var(--radius-sm);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   padding: 0.5rem 0;
   z-index: 100;
@@ -28,23 +28,15 @@
 .dropdown-link {
   display: block;
   padding: 0.5rem 1rem;
-  color: var(--muted-foreground);
+  color: var(--text-gray);
   text-decoration: none;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-xs);
   transition: background 0.2s, color 0.2s;
 }
 
 .dropdown-link:hover {
-  background: var(--secondary);
-  color: #fff;
-}
-
-/* src/components/Navbar/Navbar.css */
-
-/* Definimos el color Lime localmente por si acaso */
-:root {
-  --lime: #B5A2D2;
-  --lime-dark: #5C2DBF;
+  background: var(--color-secondary);
+  color: var(--text-white);
 }
 
 /* Contenedor fijo arriba */
@@ -72,7 +64,7 @@
   /* full rounded */
 
   /* Glassmorphism */
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: var(--overlay-dark);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--color-secondary);
@@ -90,7 +82,7 @@
 }
 
 .logo-mobile {
-  color: #fff;
+  color: var(--text-white);
   font-family: var(--font-display);
   font-weight: 700;
 }
@@ -98,22 +90,22 @@
 .logo-icon {
   width: 2rem;
   height: 2rem;
-  background-color: var(--lime-dark);
-  border-radius: 0.5rem;
+  background-color: var(--color-secondary-dark);
+  border-radius: var(--radius-xs);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .logo-icon span {
-  color: #fff;
+  color: var(--text-white);
   font-weight: bold;
   background: transparent;
 }
 
 .logo-text {
   font-weight: 600;
-  color: #fff;
+  color: var(--text-white);
   display: none;
   /* Oculto en móvil por defecto */
 }
@@ -137,7 +129,7 @@
   position: relative;
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
-  color: #fff;
+  color: var(--text-white);
   text-transform: uppercase;
   transition: color 0.2s;
   text-decoration: none;
@@ -145,7 +137,7 @@
 }
 
 .nav-link:hover {
-  color: var(--lime);
+  color: var(--text-white);
 }
 
 .nav-text {
@@ -158,9 +150,8 @@
 .nav-hover-bg {
   position: absolute;
   inset: 0;
-  background-color: var(--secondary);
-  /* Gris claro */
-  border-radius: 9999px;
+  background-color: var(--color-secondary);
+  border-radius: var(--radius-full);
   z-index: 0;
 }
 
@@ -177,7 +168,7 @@
   align-items: center;
   justify-content: center;
   padding: 0.5rem 1rem;
-  border-radius: 9999px;
+  border-radius: var(--radius-full);
   font-size: 0.875rem;
   font-weight: 600;
   cursor: pointer;
@@ -188,23 +179,22 @@
 /* Variante Ghost (transparente) */
 .btn-ghost {
   background: transparent;
-  color: var(--muted-foreground);
+  color: var(--text-gray);
 }
 
 .btn-ghost:hover {
-  color: #fff;
-  background-color: var(--secondary);
+  color: var(--text-white);
+  background-color: var(--color-secondary);
 }
 
-/* Variante Primary (Lime) */
+/* Variante Primary */
 .btn-primary {
-  background-color: var(--lime);
-  color: #000;
-  /* Texto negro para contraste */
+  background-color: var(--color-secondary);
+  color: var(--text-black);
 }
 
 .btn-primary:hover {
-  background-color: var(--lime-dark);
+  background-color: var(--color-secondary-dark);
 }
 
 /* Mobile Toggle */
@@ -212,13 +202,13 @@
   display: block;
   background: none;
   border: none;
-  color: #fff;
+  color: var(--text-white);
   cursor: pointer;
   padding: 0.5rem;
 }
 
 .mobile-toggle-btn:hover {
-  color: #fff;
+  color: var(--text-white);
 }
 
 /* Utilidades de visibilidad */
@@ -244,11 +234,10 @@
   right: 0;
   margin-top: 0.5rem;
   padding: 1rem;
-  border-radius: 1rem;
+  border-radius: var(--radius-md);
 
   /* Glassmorphism oscuro */
-  background-color: rgba(9, 9, 11, 0.95);
-  /* Casi negro opaco */
+  background-color: var(--overlay-dark-strong);
   backdrop-filter: blur(12px);
   border: 1px solid var(--color-secondary);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -270,28 +259,28 @@
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #a1a1aa;
+  color: var(--text-gray);
   padding: 0.25rem 0.25rem 0.1rem;
 }
 
 .mobile-nav-link {
   padding: 0.75rem 1rem;
   font-size: 1rem;
-  color: #fff;
-  border-radius: 0.5rem;
+  color: var(--text-white);
+  border-radius: var(--radius-xs);
   text-decoration: none;
   transition: background 0.2s, color 0.2s;
   font-family: var(--font-display);
 }
 
 .mobile-nav-link:hover {
-  color: var(--lime);
-  background-color: var(--secondary);
+  color: var(--color-secondary);
+  background-color: var(--color-secondary);
 }
 
 .divider {
   height: 1px;
-  background-color: #fff;
+  background-color: var(--border-dark-1);
   margin: 0.5rem 0;
 }
 

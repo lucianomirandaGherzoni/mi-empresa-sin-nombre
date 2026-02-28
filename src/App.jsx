@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 // --- COMPONENTES GLOBALES ---
 import { NavBar } from './components/NavBar/NavBar.jsx'
 import { Hero } from './components/Hero/Hero.jsx';
-import { LogoMarquee } from './components/LogoMarquee/LogoMarquee.jsx';
 import { QuienesSomos } from './components/QuienesSomos/QuienesSomos.jsx';
 import { FAQ } from './components/PreguntasFrecuentes/PreguntasFrecuentes.jsx';
 import { LlamadoFinal } from './components/LlamadoFinal/LlamadoFinal.jsx';
@@ -44,7 +43,6 @@ function App() {
         <Route path="/" element={
           <main>
             <Hero />
-            <LogoMarquee />
             <BentoGrid />
             <QuienesSomos />
             <FAQ />

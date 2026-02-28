@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
-import "./Navbar.css";
+import "./NavBar.css";
 
 const navItems = [
   { label: "Inicio", href: "/" },

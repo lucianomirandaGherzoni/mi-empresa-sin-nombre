@@ -3,16 +3,16 @@
    ========================================================================== */
 .seccion-heroe {
     position: relative;
-    min-height: 85vh;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 6rem 1rem 4rem;
+    padding: 6rem 1rem 12rem;
     overflow: hidden;
     text-align: center;
-    background-color: #000;
+    background-color: var(--bg-black);
 }
 
 .contenedor-heroe {
@@ -32,7 +32,7 @@
     height: 100%;
     z-index: 1;
     pointer-events: none;
-    background-color: #0d0d0d;
+    background-color: var(--bg-dark-2);
     background-image: radial-gradient(100% 60% at 50% 10%, rgba(181, 162, 210, 0.13) 0%, rgba(181, 162, 210, 0) 50%, rgba(181, 162, 210, 0) 100%);
 }
 
@@ -46,8 +46,8 @@
     pointer-events: none;
     
     background-image: 
-        linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+        linear-gradient(to right, var(--grid-lines) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-lines) 1px, transparent 1px);
     background-size: 50px 40px;
     
     /* El difuminado ahora nace fuerte desde el centro-abajo (50% 100%) y se desvanece hacia arriba */
@@ -58,15 +58,14 @@
    TIPOGRAFÍA Y ESTILOS DE TEXTO
    ========================================================================== */
 .frase-hero-animada {
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 700;
     display: block;
     text-align: center;
-    background: linear-gradient(90deg, #f5f5f5 0%, #B5A2D2 30%, #cccccc 60%, #444 100%);
+    background: linear-gradient(90deg, var(--text-white-soft) 0%, var(--color-secondary) 30%, var(--text-gray-medium) 60%, var(--text-gray-darker) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
     letter-spacing: -0.03em;
     margin-top: 0.2em;
     margin-bottom: 0.2em;
@@ -80,7 +79,7 @@
     font-size: 1.8rem;
     line-height: 1;
     letter-spacing: -0.03em;
-    color: #fff;
+    color: var(--text-white);
     margin-bottom: 1.2rem;
 }
 
@@ -88,6 +87,7 @@
     font-weight: 000;
     line-height: 1.1;
     font-family: var(--font-display);
+    font-size: 1.3rem;
 }
 
 .mascara-texto {
@@ -102,7 +102,7 @@
 
 .descripcion-heroe {
     font-size: .9rem;
-    color: #a1a1aa;
+    color: var(--text-gray);
     max-width: 30rem;
     margin-bottom: 2.5rem;
     line-height: 1.6;
@@ -114,7 +114,7 @@
     display: block;
     text-align: center;
     margin: 0 auto;
-    color: #bdbdbd;
+    color: var(--text-gray-medium);
     max-width: 100vw;
     margin-bottom: 1rem;
 }
@@ -124,7 +124,7 @@
    ========================================================================== */
 .grupo-botones {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
     align-items: center;
     max-width: 400px;
@@ -136,7 +136,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    border-radius: 9999px;
+    border-radius: var(--radius-full);
     font-weight: 300;
     transition: all 0.2s;
     cursor: pointer;
@@ -148,20 +148,31 @@
 }
 
 .boton-heroe.primario {
-    background-color: #B5A2D2;
-    color: #000;
+    background-color: var(--color-secondary);
+    color: var(--text-black);
 }
 
 .boton-heroe.contorno {
     background: transparent;
     border-color: var(--color-secondary);
-    color: #fff;
+    color: var(--text-white);
 }
 
 /* ==========================================================================
    MEDIA QUERIES
    ========================================================================== */
+
+/* Móviles */
+@media (max-width: 767px) {
+    .seccion-heroe {
+        padding: 6rem 1rem 14rem;
+    }
+}
+
 @media (min-width: 768px) {
+    .seccion-heroe {
+        padding: 6rem 1rem 10rem;
+    }
     .frase-hero-animada {
         font-size: 2.2rem;
     }
@@ -171,6 +182,9 @@
         line-height: 1.22;
     }
 
+    .titulo-negocio{
+         font-size: 3.2rem;
+    }
     .descripcion-heroe {
         font-size: 1rem;
         max-width: 42rem;
@@ -188,7 +202,11 @@
         font-weight: 600;
         font-size: 3.5rem;
     }
+    
 
+    .titulo-negocio{
+         font-size: 4rem;
+    }
     .titulo-principal {
         font-size: 4rem;
         font-weight: 100;

@@ -22,7 +22,16 @@ export function LogoMarquee() {
 
   return (
     <section ref={ref} className="marquee-section">
+      {/* Fondo con gradiente */}
+      <div className="marquee-fondo-gradiente" />
+      
+      {/* Grid de fondo */}
+      <div className="marquee-grid" />
 
+      {/* Texto superior */}
+      <div className="marquee-header">
+        <p>Confiaron en nosotros</p>
+      </div>
 
       {/* Contenedor del Carrusel */}
       <div className="marquee-container">

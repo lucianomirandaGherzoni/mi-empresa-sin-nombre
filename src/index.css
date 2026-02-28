@@ -1,14 +1,90 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Syne:wght@400..800&display=swap');
 
 :root {
-  /* --- Material Design 3: Tokens globales --- */
-  --color-base: #303231;         /* Gris oscuro para texto principal */
-  --color-primary: #FF4600;      /* Naranja vibrante para CTA */
-  --color-secondary: #C4A6F0;    /* Lila suave para fondos/acento */
-  --color-bg: #FFFFFF;           /* Fondo blanco/neutro */
-  --radius: 1.5rem;              /* Bordes redondeados (24px) */
+  /* ========================================
+     TIPOGRAFÍA
+     ======================================== */
   --font-display: 'Syne', sans-serif;
   --font-body: 'Inter', sans-serif;
+
+  /* ========================================
+     COLORES PRINCIPALES
+     ======================================== */
+  --color-primary: #FF4600;        /* Naranja vibrante para CTA */
+  --color-secondary: #B5A2D2;      /* Lila medio para acentos */
+  --color-secondary-dark: #5C2DBF; /* Lila oscuro para hover */
+  --color-secondary-light: #C4A6F0; /* Lila claro */
+  
+  /* ========================================
+     COLORES DE FONDO
+     ======================================== */
+  --bg-black: #000000;
+  --bg-dark-1: #0a0a0a;           /* Tarjetas oscuras */
+  --bg-dark-2: #0d0d0d;           /* Secciones oscuras */
+  --bg-dark-3: #050509;           /* Fondos con gradiente */
+  --bg-dark-4: #18181b;           /* Inputs/Toggle */
+  --bg-white: #ffffff;
+  
+  /* ========================================
+     COLORES DE BORDE
+     ======================================== */
+  --border-dark-1: #1a1a1a;       /* Bordes sutiles */
+  --border-dark-2: #27272a;       /* Bordes medios */
+  --border-dark-3: #3f3f46;       /* Bordes hover */
+  
+  /* Bordes para tema claro */
+  --border-light-1: #e5e5e5;      /* Bordes sutiles claros */
+  --border-light-2: #d8d8d8;      /* Bordes medios claros */
+  --border-light-3: #c0c0c0;      /* Bordes hover claros */
+  
+  /* ========================================
+     COLORES DE TEXTO
+     ======================================== */
+  --text-white: #ffffff;
+  --text-white-soft: #f5f5f5;
+  --text-white-muted: #eee;
+  --text-gray-light: #d4d4d8;
+  --text-gray-medium: #cccccc;
+  --text-gray: #a1a1aa;
+  --text-gray-dark: #71717a;
+  --text-gray-darker: #444;
+  --text-black: #000000;
+  --text-black-soft: #0d0d0d;
+  
+  /* Colores de texto para secciones claras */
+  --text-on-light: #000000;
+  --text-on-light-soft: #0a0a0a;
+  --text-on-light-muted: #111111;
+  --text-on-light-gray: #5e5e5e;
+  --text-on-light-gray-dark: #8e8e8e;
+  
+  /* ========================================
+     COLORES DE ESTADO
+     ======================================== */
+  --color-success: #10b981;
+  --color-success-light: #34d399;
+  --color-success-bg: rgba(16, 185, 129, 0.2);
+  
+  /* ========================================
+     OPACIDADES Y EFECTOS
+     ======================================== */
+  --overlay-dark: rgba(0, 0, 0, 0.6);
+  --overlay-dark-strong: rgba(0, 0, 0, 0.95);
+  --grid-lines: rgba(255, 255, 255, 0.04);
+  --grid-lines-strong: rgba(255, 255, 255, 0.08);
+  
+  /* Para secciones claras */
+  --grid-lines-light: rgba(0, 0, 0, 0.06);
+  
+  /* ========================================
+     BORDES Y ESPACIADO
+     ======================================== */
+  --radius: 1.5rem;               /* 24px */
+  --radius-lg: 1.75rem;           /* 28px */
+  --radius-md: 1rem;              /* 16px */
+  --radius-sm: 0.75rem;           /* 12px */
+  --radius-xs: 0.5rem;            /* 8px */
+  --radius-full: 9999px;          /* Pills/círculos */
 }
 
 
@@ -17,11 +93,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border-color: #fff;
+  border-color: var(--border-dark-1);
 }
 
 body {
-      /* Siempre Blanco */
   font-family: var(--font-body);
   min-height: 100vh;
   line-height: 1.5;

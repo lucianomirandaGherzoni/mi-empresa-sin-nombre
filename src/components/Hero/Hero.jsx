@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { LogoMarquee } from '../LogoMarquee/LogoMarquee.jsx';
 import './Hero.css';
 
 const variantesRevelado = {
@@ -50,7 +51,7 @@ export function Hero() {
                     transition={{ duration: 0.6, delay: 0.5 }}
                     className="descripcion-heroe startup-centro"
                 >
-                    Somos una startup digital creativa
+            {/*         Somos una startup digital creativa */}
                 </motion.p>
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -66,6 +67,9 @@ export function Hero() {
                     </button>
                 </motion.div>
             </div>
+            
+            {/* LogoMarquee integrado */}
+            <LogoMarquee />
         </section>
     );
 }

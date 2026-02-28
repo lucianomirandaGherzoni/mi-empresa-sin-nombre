@@ -4,15 +4,15 @@
 .seccion-bento {
     position: relative;
     padding: 5rem 1.5rem;
-    background-color: #000;
+    background-color: var(--bg-white);
     overflow: hidden;
 }
 
 .bento-fondo-gradiente {
     position: absolute;
     inset: 0;
-    background-color: #050509;
-    background-image: radial-gradient(90% 70% at 10% 10%, rgba(181, 162, 210, 0.14) 0%, rgba(181, 162, 210, 0) 45%);
+    background-color: #fafafa;
+    background-image: radial-gradient(90% 70% at 10% 10%, rgba(181, 162, 210, 0.08) 0%, rgba(181, 162, 210, 0) 45%);
     pointer-events: none;
     z-index: 1;
 }
@@ -21,10 +21,10 @@
     position: absolute;
     inset: 0;
     background-image:
-        linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+        linear-gradient(to right, var(--grid-lines-light) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-lines-light) 1px, transparent 1px);
     background-size: 46px 38px;
-    opacity: 0.18;
+    opacity: 0.5;
     -webkit-mask-image: radial-gradient(ellipse 90% 90% at 50% 10%, black 10%, transparent 70%);
     mask-image: radial-gradient(ellipse 90% 90% at 50% 10%, black 10%, transparent 70%);
     pointer-events: none;
@@ -49,7 +49,7 @@
 
 .cabecera-seccion .titulo-seccion-principal {
     font-size: 2.3rem;
-    color: #fff;
+    color: var(--text-on-light);
     font-weight: 600;
     letter-spacing: -0.04em;
     font-family: var(--font-display);
@@ -66,9 +66,9 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    background-color: #0a0a0a;
-    border: 1px solid #1a1a1a;
-    border-radius: 1.75rem;
+    background-color: #f5f5f5;
+    border: 1px solid var(--color-secondary);
+    border-radius: var(--radius-lg);
     padding: 2rem;
     overflow: hidden;
     position: relative;
@@ -91,7 +91,7 @@
 }
 
 .tarjeta-bento:hover {
-    border-color:var(--color-secondary);
+    border-color: var(--color-secondary);
     transform: translateY(-6px);
 }
 
@@ -118,18 +118,18 @@
 }
 
 .icono-lime {
-    color: #52525b;
+    color: #a0a0a0;
     width: 22px;
     transition: color 0.3s;
 }
 
 .tarjeta-bento:hover .icono-lime {
-    color: #B5A2D2;
+    color: var(--color-secondary);
 }
 
 .titulo-header h3 {
     font-size: 1.25rem;
-    color: #eee;
+    color: var(--text-on-light-muted);
     font-weight: 600;
     margin: 0;
 }
@@ -138,18 +138,18 @@
     position: absolute;
     top: 0;
     right: 0;
-    color: #27272a;
+    color: var(--border-light-2);
     transition: all 0.3s;
 }
 
 .tarjeta-bento:hover .flecha-link {
-    color: #B5A2D2;
+    color: var(--color-secondary);
     transform: translate(3px, -3px);
 }
 
 .info-tarjeta p {
     font-size: 0.9rem;
-    color: #666;
+    color: var(--text-on-light-gray);
     line-height: 1.5;
     max-width: 90%;
 }
@@ -176,23 +176,23 @@
     max-width: 400px;
     height: auto;
     aspect-ratio: 16/10;
-    background: #131313;
-    border: 1.5px solid #232323;
+    background: #e8e8e8;
+    border: 1.5px solid var(--border-light-1);
     border-radius: 14px 14px 0 0;
     overflow: hidden;
-    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     margin: 0 auto;
 }
 
 .header-navegador {
-    background: #181818;
+    background: #d0d0d0;
     padding: 0 12px;
     height: 32px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #232323;
+    border-bottom: 1px solid var(--border-light-1);
     gap: 12px;
     flex-shrink: 0;
 }
@@ -210,7 +210,7 @@
 }
 
 .barra-direccion {
-    background: #232323;
+    background: var(--border-light-1);
     height: 10px;
     border-radius: 4px;
     flex: 1;
@@ -233,7 +233,7 @@
 .logo-falso {
     width: 20px;
     height: 20px;
-    background: #B5A2D2;
+    background: var(--color-secondary);
     border-radius: 4px;
 }
 
@@ -267,7 +267,7 @@
 .titulo-hero {
     width: 70%;
     height: 16px;
-    background: #fff;
+    background: var(--text-black);
     border-radius: 4px;
     opacity: 0.9;
 }
@@ -333,15 +333,15 @@
     max-width: 220px;
     height: auto;
     aspect-ratio: 9/16;
-    background: #181818;
-    border: 1.5px solid #232323;
+    background: #e0e0e0;
+    border: 1.5px solid var(--border-light-1);
     border-radius: 24px 24px 0 0;
     padding: 20px 14px;
     display: flex;
     flex-direction: column;
     gap: 12px;
     margin: 0 auto;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* Invitaciones */
@@ -359,7 +359,7 @@
 }
 
 .nombres-novios {
-    color: #fff;
+    color: var(--text-black);
     font-size: 14px;
     font-weight: 700;
 }
@@ -370,7 +370,7 @@
 }
 
 .lista-datos {
-    background: #232323;
+    background: #d8d8d8;
     border-radius: 10px;
     padding: 12px;
     display: flex;
@@ -387,7 +387,7 @@
 }
 
 .dato-valor {
-    color: #fff;
+    color: var(--text-black);
     font-weight: 500;
 }
 
@@ -400,7 +400,7 @@
 }
 
 .mes-texto {
-    color: #B5A2D2;
+    color: var(--color-secondary);
     font-size: 14px;
     font-weight: 700;
 }
@@ -425,7 +425,7 @@
 
 .dia-cal {
     aspect-ratio: 1;
-    background: #232323;
+    background: #d8d8d8;
     border-radius: 4px;
     font-size: 9px;
     color: #666;
@@ -435,8 +435,8 @@
 }
 
 .dia-activo {
-    background: #333;
-    color: #fff;
+    background: #ccc;
+    color: var(--text-black);
     font-weight: 700;
 }
 
@@ -444,7 +444,7 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
-    background: #232323;
+    background: #d8d8d8;
     padding: 10px;
     border-radius: 8px;
     margin-top: 10px;
@@ -453,19 +453,19 @@
 .item-turno {
     display: flex;
     justify-content: space-between;
-    background: #1a1a1a;
+    background: #e5e5e5;
     padding: 8px;
     border-radius: 4px;
 }
 
 .hora-turno {
-    color: #B5A2D2;
+    color: var(--color-secondary);
     font-size: 10px;
     font-weight: 600;
 }
 
 .estado-turno {
-    color: #fff;
+    color: var(--text-black);
     font-size: 10px;
 }
 
@@ -479,7 +479,7 @@
 }
 
 .nombre-resto {
-    color: #B5A2D2;
+    color: var(--color-secondary);
     font-size: 14px;
     font-weight: 700;
 }
@@ -493,13 +493,13 @@
     font-size: 10px;
     padding: 4px 12px;
     border-radius: 12px;
-    background: #232323;
+    background: #d8d8d8;
     color: #888;
 }
 
 .tab-activa {
-    background: #333;
-    color: #fff;
+    background: #ccc;
+    color: var(--text-black);
 }
 
 .lista-platos {
@@ -514,7 +514,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
-    border-bottom: 1px solid #232323;
+    border-bottom: 1px solid var(--border-light-1);
 }
 
 .info-plato {
@@ -524,7 +524,7 @@
 }
 
 .nombre-plato {
-    color: #fff;
+    color: var(--text-black);
     font-size: 11px;
     font-weight: 600;
 }
@@ -532,12 +532,12 @@
 .linea-plato {
     width: 30px;
     height: 2px;
-    background: #333;
+    background: #ccc;
     border-radius: 2px;
 }
 
 .precio-plato {
-    color: #B5A2D2;
+    color: var(--color-secondary);
     font-size: 11px;
     font-weight: 700;
 }
@@ -563,8 +563,8 @@
     max-width: 400px;
     height: auto;
     aspect-ratio: 16/10;
-    background: #0c0c0c;
-    border: 1.5px solid #232323;
+    background: #f3f3f3;
+    border: 1.5px solid var(--border-light-1);
     border-radius: 14px 14px 0 0;
     overflow: hidden;
     display: flex;
@@ -574,12 +574,12 @@
 }
 
 .header-terminal {
-    background: #181818;
+    background: #d0d0d0;
     padding: 0 12px;
     height: 32px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #232323;
+    border-bottom: 1px solid var(--border-light-1);
     gap: 12px;
     flex-shrink: 0;
 }
@@ -607,8 +607,8 @@
 }
 
 .bloque-tech {
-    background: #1a1a1a;
-    border: 1px solid #333;
+    background: #e5e5e5;
+    border: 1px solid #ccc;
     border-radius: 8px;
     padding: 12px;
     width: 42%;
@@ -668,14 +668,14 @@
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    border-top: 1px solid #232323;
+    border-top: 1px solid var(--border-light-1);
     padding-top: 14px;
 }
 
 .tag-terminal {
     padding: 4px 10px;
-    background: #181818;
-    border: 1px solid #2a2a2a;
+    background: #e0e0e0;
+    border: 1px solid #d5d5d5;
     border-radius: 4px;
     color: #666;
     font-size: 10px;
@@ -684,40 +684,48 @@
 
 /* HOVERS */
 .tarjeta-bento:hover .btn-accion-mockup {
-    background-color: #B5A2D2;
-    color: #000;
+    background-color: var(--color-secondary);
+    color: var(--bg-white);
 }
 
 .tarjeta-bento:hover .dia-activo {
-    background-color: #B5A2D2;
-    color: #000;
+    background-color: var(--color-secondary);
+    color: var(--bg-white);
 }
 
 .tarjeta-bento:hover .tab-activa {
-    background-color: #B5A2D2;
-    color: #000;
+    background-color: var(--color-secondary);
+    color: var(--bg-white);
 }
 
 .tarjeta-bento:hover .flecha-flujo {
-    color: #B5A2D2;
+    color: var(--color-secondary);
     transform: translateX(3px);
 }
 
 .tarjeta-bento:hover .etiqueta-flujo {
-    color: #B5A2D2;
+    color: var(--color-secondary);
 }
 
 .tarjeta-bento:hover .bloque-tech {
-    border-color: #B5A2D2;
+    border-color: var(--color-secondary);
 }
 
 .tarjeta-bento:hover .tag-terminal.highlight {
-    background: #B5A2D2;
-    color: #000;
-    border-color: #B5A2D2;
+    background: var(--color-secondary);
+    color: var(--bg-white);
+    border-color: var(--color-secondary);
 }
 
 /* MEDIA QUERIES */
+
+/* Móviles */
+@media (max-width: 767px) {
+    .cabecera-seccion {
+        text-align: left;
+    }
+}
+
 @media (min-width: 768px) {
     .grilla-servicios {
         grid-template-columns: repeat(2, 1fr);
