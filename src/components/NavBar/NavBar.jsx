@@ -25,6 +25,7 @@ export function NavBar() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
+  const [hiddenOnFooter, setHiddenOnFooter] = useState(false);
 
   // Efecto para bloquear el scroll cuando el menú móvil está abierto (opcional)
   useEffect(() => {
@@ -35,11 +36,29 @@ export function NavBar() {
     }
   }, [mobileMenuOpen]);
 
+  // Ocultar navbar en móvil cuando el footer es visible
+  useEffect(() => {
+    const footer = document.querySelector('.footer-root');
+    if (!footer) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (window.innerWidth < 768) {
+          setHiddenOnFooter(entry.isIntersecting);
+        }
+      },
+      { rootMargin: "0px 0px 180px 0px", threshold: 0 }
+    );
+
+    observer.observe(footer);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <motion.header
       initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      animate={{ y: hiddenOnFooter ? "-150%" : 0, opacity: hiddenOnFooter ? 0 : 1 }}
+      transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
       className="navbar-fixed"
     >
       <nav className="navbar-container">

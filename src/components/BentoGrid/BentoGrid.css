@@ -31,6 +31,14 @@
     z-index: 1;
 }
 
+@media (max-width: 768px) {
+    .bento-grid-fondo {
+        opacity: 0.75;
+        -webkit-mask-image: radial-gradient(ellipse 100% 80% at 50% 100%, black 30%, transparent 90%);
+        mask-image: radial-gradient(ellipse 100% 80% at 50% 100%, black 30%, transparent 90%);
+    }
+}
+
 .contenedor-principal {
     max-width: 1200px;
     margin: 0 auto;

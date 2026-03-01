@@ -132,6 +132,14 @@ button {
   font-family: inherit; /* Que usen la misma letra que la web */
 }
 
+/* Mayor visibilidad del cuadriculado en pantallas chicas */
+@media (max-width: 768px) {
+  :root {
+    --grid-lines: rgba(255, 255, 255, 0.07);
+    --grid-lines-strong: rgba(255, 255, 255, 0.11);
+  }
+}
+
 /* Imágenes responsive */
 img, svg {
   display: block;

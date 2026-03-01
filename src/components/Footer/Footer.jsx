@@ -45,11 +45,12 @@ export function Footer() {
     const fill = fillRef.current;
 
     const ctx = gsap.context(() => {
+      const isMobile = window.innerWidth < 768;
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: footer,
-          start: "top bottom",
-          end: "bottom bottom",
+          start: isMobile ? "top 110%" : "top 95%",
+          end: isMobile ? "top 5%" : "top 15%",
           scrub: 1.2,
           invalidateOnRefresh: true,
         },
@@ -122,21 +123,38 @@ export function Footer() {
 
           <div className="footer-col">
             <h4 className="footer-col-title">Contacto</h4>
-            <ul className="footer-link-list">
-              {redesSociales.map(({ label, href, icon: Icon }) => (
-                <li key={label}>
-                  <a
-                    href={href}
-                    className="footer-link footer-social footer-animatable"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Icon size={14} />
-                    {label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <div className="footer-contact-grid">
+              <ul className="footer-link-list">
+                {redesSociales.slice(0, 2).map(({ label, href, icon: Icon }) => (
+                  <li key={label}>
+                    <a
+                      href={href}
+                      className="footer-link footer-social footer-animatable"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Icon size={14} />
+                      {label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <ul className="footer-link-list">
+                {redesSociales.slice(2).map(({ label, href, icon: Icon }) => (
+                  <li key={label}>
+                    <a
+                      href={href}
+                      className="footer-link footer-social footer-animatable"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Icon size={14} />
+                      {label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 
