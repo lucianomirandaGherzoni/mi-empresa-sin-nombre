@@ -4,31 +4,31 @@
 .seccion-bento {
     position: relative;
     padding: 5rem 1.5rem;
-    background-color: var(--bg-white);
+    background-color: var(--bg-dark-2);
     overflow: hidden;
 }
 
 .bento-fondo-gradiente {
     position: absolute;
     inset: 0;
-    background-color: #fafafa;
-    background-image: radial-gradient(90% 70% at 10% 10%, rgba(181, 162, 210, 0.08) 0%, rgba(181, 162, 210, 0) 45%);
+    background-color: var(--bg-dark-2);
+    background-image: radial-gradient(60% 50% at 50% 60%, rgba(181, 162, 210, 0.12) 0%, rgba(181, 162, 210, 0) 100%);
     pointer-events: none;
-    z-index: 1;
+    z-index: 0;
 }
 
 .bento-grid-fondo {
     position: absolute;
     inset: 0;
     background-image:
-        linear-gradient(to right, var(--grid-lines-light) 1px, transparent 1px),
-        linear-gradient(to bottom, var(--grid-lines-light) 1px, transparent 1px);
+        linear-gradient(to right, var(--grid-lines) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-lines) 1px, transparent 1px);
     background-size: 46px 38px;
-    opacity: 0.5;
-    -webkit-mask-image: radial-gradient(ellipse 90% 90% at 50% 10%, black 10%, transparent 70%);
-    mask-image: radial-gradient(ellipse 90% 90% at 50% 10%, black 10%, transparent 70%);
+    opacity: 0.4;
+    -webkit-mask-image: radial-gradient(ellipse 75% 55% at 50% 62%, black 0%, transparent 80%);
+    mask-image: radial-gradient(ellipse 75% 55% at 50% 62%, black 0%, transparent 80%);
     pointer-events: none;
-    z-index: 2;
+    z-index: 1;
 }
 
 .contenedor-principal {
@@ -48,8 +48,8 @@
 }
 
 .cabecera-seccion .titulo-seccion-principal {
-    font-size: 2.3rem;
-    color: var(--text-on-light);
+    font-size: var(--text-3xl);
+    color: var(--text-white);
     font-weight: 600;
     letter-spacing: -0.04em;
     font-family: var(--font-display);
@@ -66,8 +66,8 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    background-color: #f5f5f5;
-    border: 1px solid var(--color-secondary);
+    background-color: var(--bg-dark-1);
+    border: 1px solid rgba(181, 162, 210, 0.18);
     border-radius: var(--radius-lg);
     padding: 2rem;
     overflow: hidden;
@@ -76,22 +76,27 @@
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.tarjeta-acento {
-    border-color: var(--color-secondary);
-    position: relative;
-}
-
-.tarjeta-acento::before {
+.tarjeta-bento::before {
     content: "";
     position: absolute;
     inset: -40%;
     background: radial-gradient(circle at 100% 0%, rgba(181, 162, 210, 0.45), transparent 55%);
-    opacity: 0.35;
+    opacity: 0;
     pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.tarjeta-bento:hover::before {
+    opacity: 0.35;
+}
+
+.tarjeta-acento {
+    border-color: rgba(181, 162, 210, 0.18);
+    position: relative;
 }
 
 .tarjeta-bento:hover {
-    border-color: var(--color-secondary);
+    border-color: rgba(181, 162, 210, 0.45);
     transform: translateY(-6px);
 }
 
@@ -128,8 +133,8 @@
 }
 
 .titulo-header h3 {
-    font-size: 1.25rem;
-    color: var(--text-on-light-muted);
+    font-size: var(--text-lg);
+    color: var(--text-white-muted);
     font-weight: 600;
     margin: 0;
 }
@@ -138,7 +143,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    color: var(--border-light-2);
+    color: var(--border-dark-3);
     transition: all 0.3s;
 }
 
@@ -148,8 +153,8 @@
 }
 
 .info-tarjeta p {
-    font-size: 0.9rem;
-    color: var(--text-on-light-gray);
+    font-size: var(--text-sm);
+    color: var(--text-gray);
     line-height: 1.5;
     max-width: 90%;
 }
@@ -176,8 +181,8 @@
     max-width: 400px;
     height: auto;
     aspect-ratio: 16/10;
-    background: #e8e8e8;
-    border: 1.5px solid var(--border-light-1);
+    background: #111111;
+    border: 1.5px solid var(--border-dark-2);
     border-radius: 14px 14px 0 0;
     overflow: hidden;
     box-shadow: 0 4px 32px rgba(0, 0, 0, 0.1);
@@ -187,12 +192,12 @@
 }
 
 .header-navegador {
-    background: #d0d0d0;
+    background: #1a1a1a;
     padding: 0 12px;
     height: 32px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid var(--border-light-1);
+    border-bottom: 1px solid var(--border-dark-2);
     gap: 12px;
     flex-shrink: 0;
 }
@@ -210,7 +215,7 @@
 }
 
 .barra-direccion {
-    background: var(--border-light-1);
+    background: var(--border-dark-2);
     height: 10px;
     border-radius: 4px;
     flex: 1;
@@ -333,8 +338,8 @@
     max-width: 220px;
     height: auto;
     aspect-ratio: 9/16;
-    background: #e0e0e0;
-    border: 1.5px solid var(--border-light-1);
+    background: #111111;
+    border: 1.5px solid var(--border-dark-2);
     border-radius: 24px 24px 0 0;
     padding: 20px 14px;
     display: flex;
@@ -359,7 +364,7 @@
 }
 
 .nombres-novios {
-    color: var(--text-black);
+    color: var(--text-white-muted);
     font-size: 14px;
     font-weight: 700;
 }
@@ -370,7 +375,7 @@
 }
 
 .lista-datos {
-    background: #d8d8d8;
+    background: #1a1a1a;
     border-radius: 10px;
     padding: 12px;
     display: flex;
@@ -387,7 +392,7 @@
 }
 
 .dato-valor {
-    color: var(--text-black);
+    color: var(--text-white-muted);
     font-weight: 500;
 }
 
@@ -425,7 +430,7 @@
 
 .dia-cal {
     aspect-ratio: 1;
-    background: #d8d8d8;
+    background: #1a1a1a;
     border-radius: 4px;
     font-size: 9px;
     color: #666;
@@ -435,8 +440,8 @@
 }
 
 .dia-activo {
-    background: #ccc;
-    color: var(--text-black);
+    background: #2a2a2a;
+    color: var(--text-white-muted);
     font-weight: 700;
 }
 
@@ -444,7 +449,7 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
-    background: #d8d8d8;
+    background: #1a1a1a;
     padding: 10px;
     border-radius: 8px;
     margin-top: 10px;
@@ -453,7 +458,7 @@
 .item-turno {
     display: flex;
     justify-content: space-between;
-    background: #e5e5e5;
+    background: #222222;
     padding: 8px;
     border-radius: 4px;
 }
@@ -465,7 +470,7 @@
 }
 
 .estado-turno {
-    color: var(--text-black);
+    color: var(--text-white-muted);
     font-size: 10px;
 }
 
@@ -493,13 +498,13 @@
     font-size: 10px;
     padding: 4px 12px;
     border-radius: 12px;
-    background: #d8d8d8;
+    background: #1a1a1a;
     color: #888;
 }
 
 .tab-activa {
-    background: #ccc;
-    color: var(--text-black);
+    background: #2a2a2a;
+    color: var(--text-white-muted);
 }
 
 .lista-platos {
@@ -514,7 +519,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
-    border-bottom: 1px solid var(--border-light-1);
+    border-bottom: 1px solid var(--border-dark-2);
 }
 
 .info-plato {
@@ -524,7 +529,7 @@
 }
 
 .nombre-plato {
-    color: var(--text-black);
+    color: var(--text-white-muted);
     font-size: 11px;
     font-weight: 600;
 }
@@ -563,8 +568,8 @@
     max-width: 400px;
     height: auto;
     aspect-ratio: 16/10;
-    background: #f3f3f3;
-    border: 1.5px solid var(--border-light-1);
+    background: #111111;
+    border: 1.5px solid var(--border-dark-2);
     border-radius: 14px 14px 0 0;
     overflow: hidden;
     display: flex;
@@ -574,19 +579,19 @@
 }
 
 .header-terminal {
-    background: #d0d0d0;
+    background: #1a1a1a;
     padding: 0 12px;
     height: 32px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid var(--border-light-1);
+    border-bottom: 1px solid var(--border-dark-2);
     gap: 12px;
     flex-shrink: 0;
 }
 
 .titulo-terminal {
     font-size: 11px;
-    color: #666;
+    color: #888;
     flex: 1;
     text-align: center;
 }
@@ -607,8 +612,8 @@
 }
 
 .bloque-tech {
-    background: #e5e5e5;
-    border: 1px solid #ccc;
+    background: #1a1a1a;
+    border: 1px solid var(--border-dark-2);
     border-radius: 8px;
     padding: 12px;
     width: 42%;
@@ -649,7 +654,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #444;
+    color: #888;
     gap: 4px;
 }
 
@@ -668,16 +673,16 @@
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    border-top: 1px solid var(--border-light-1);
+    border-top: 1px solid var(--border-dark-2);
     padding-top: 14px;
 }
 
 .tag-terminal {
     padding: 4px 10px;
-    background: #e0e0e0;
-    border: 1px solid #d5d5d5;
+    background: #1a1a1a;
+    border: 1px solid var(--border-dark-2);
     border-radius: 4px;
-    color: #666;
+    color: #888;
     font-size: 10px;
     transition: all 0.3s;
 }

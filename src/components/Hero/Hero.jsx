@@ -17,7 +17,7 @@ const variantesRevelado = {
 
 function FrasesAnimadasHero() {
     return (
-        <span className="bloque frase-hero-animada">Con pasión y dedicación</span>
+        <span className="bloque frase-hero-animada">Construida a medida.</span>
     );
 }
 
@@ -39,7 +39,7 @@ export function Hero() {
                             animate="visible"
                             custom={0}
                         >
-                            Creamos experiencias digitales.
+                            Presencia digital
                         </motion.span>
                     </span>
                     <span className="mascara-texto">

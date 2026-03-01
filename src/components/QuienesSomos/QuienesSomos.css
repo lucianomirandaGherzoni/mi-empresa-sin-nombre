@@ -49,7 +49,7 @@
   padding: 0;
   border-radius: 0;
   border: none;
-  font-size: 0.8rem;
+  font-size: var(--text-xs);
   text-transform: uppercase;
   letter-spacing: 0.16em;
   color: var(--color-secondary);
@@ -60,7 +60,7 @@
 
 .titulo-quienes-somos {
   margin-top: 1.25rem;
-  font-size: clamp(2.2rem, 3vw, 2.6rem);
+  font-size: var(--text-3xl);
   font-weight: 600;
   letter-spacing: -0.04em;
   color: var(--text-white-soft);
@@ -69,7 +69,7 @@
 
 .descripcion-quienes-somos {
   margin-top: 1rem;
-  font-size: 0.95rem;
+  font-size: var(--text-base);
   line-height: 1.7;
   color: var(--text-gray);
   max-width: 42rem;
@@ -116,7 +116,7 @@
 }
 
 .tarjeta-quienes h3 {
-  font-size: 1.05rem;
+  font-size: var(--text-lg);
   font-weight: 600;
   color: #e5e7eb;
   margin-bottom: 0.75rem;
@@ -124,7 +124,7 @@
 }
 
 .tarjeta-quienes p {
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
   line-height: 1.7;
   color: #9ca3af;
 }

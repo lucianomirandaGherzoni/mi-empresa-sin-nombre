@@ -1,11 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
 
 :root {
   /* ========================================
      TIPOGRAFÍA
      ======================================== */
-  --font-display: 'Syne', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-display: "Zalando Sans Expanded", sans-serif;
+  --font-body: "Zalando Sans Expanded", sans-serif;
+
+  /* ========================================
+     ESCALA TIPOGRÁFICA FLUIDA
+     Fórmula: clamp(mín, vw-preferido, máx)
+     Breakpoints referencia: 375px → 1440px
+     ======================================== */
+  --text-xs:    clamp(0.68rem,  0.85vw, 0.75rem);   /* tags, labels */
+  --text-sm:    clamp(0.78rem,  1vw,    0.875rem);   /* captions, notas */
+  --text-base:  clamp(0.875rem, 1.1vw,  1rem);       /* cuerpo principal */
+  --text-md:    clamp(0.95rem,  1.3vw,  1.1rem);     /* cuerpo destacado */
+  --text-lg:    clamp(1.05rem,  1.5vw,  1.25rem);    /* títulos tarjeta */
+  --text-xl:    clamp(1.2rem,   2vw,    1.5rem);     /* subtítulos */
+  --text-2xl:   clamp(1.5rem,   2.5vw,  2rem);       /* títulos pequeños */
+  --text-3xl:   clamp(1.75rem,  3vw,    2.5rem);     /* títulos sección */
+  --text-4xl:   clamp(2rem,     4.5vw,  3.75rem);    /* heros secundarios */
+  --text-hero:  clamp(1.9rem,   5.5vw,  4.2rem);     /* hero principal */
 
   /* ========================================
      COLORES PRINCIPALES

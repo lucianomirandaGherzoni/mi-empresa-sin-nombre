@@ -19,12 +19,13 @@ export function QuienesSomos() {
         >
           <p className="etiqueta-seccion">Quiénes somos</p>
           <h2 className="titulo-quienes-somos">
-            Un equipo de desarrollo centrado en el negocio, no solo en el código
+            Un equipo con roles claros y un objetivo compartido
           </h2>
           <p className="descripcion-quienes-somos">
-            Somos un estudio digital de Bariloche que combina diseño, estrategia y tecnología 
-            para acompañar a emprendedores y empresas de la región. Nos enfocamos en crear 
-            soluciones que generen ventas reales, ahorren tiempo y eleven la experiencia de tus clientes.
+            Somos tres profesionales con perfiles complementarios: un desarrollador y diseñador 
+            que construye cada proyecto desde cero, y dos especialistas comerciales que entienden 
+            el mercado y conectan con cada cliente. Esa combinación es lo que nos permite ofrecer 
+            soluciones que funcionan tanto técnicamente como comercialmente.
           </p>
         </motion.div>
 
@@ -35,24 +36,24 @@ export function QuienesSomos() {
           className="grid-quienes-somos"
         >
           <div className="tarjeta-quienes">
-            <h3>Enfoque humano</h3>
+            <h3>Comunicación clara</h3>
             <p>
-              Hablamos en claro, sin tecnicismos innecesarios. Te acompañamos en cada etapa del proyecto 
-              para que entiendas qué hacemos y por qué lo hacemos.
+              Hablamos sin tecnicismos. En cada etapa del proyecto sabés qué se está haciendo, 
+              por qué y cuánto cuesta. Sin sorpresas.
             </p>
           </div>
           <div className="tarjeta-quienes">
-            <h3>Experiencia en negocios reales</h3>
+            <h3>Soluciones a medida</h3>
             <p>
-              Venimos trabajando con comercios, profesionales y pymes que necesitan vender más y organizarse mejor, 
-              no solo “tener una web”.
+              Cada negocio es distinto y lo tratamos como tal. Escuchamos, analizamos 
+              y construimos una solución que responde a tus necesidades reales, no a una plantilla genérica.
             </p>
           </div>
           <div className="tarjeta-quienes">
-            <h3>Acompañamiento continuo</h3>
+            <h3>Presencia a largo plazo</h3>
             <p>
-              No entregamos y desaparecemos. Te ofrecemos soporte, mejoras evolutivas y nuevas ideas 
-              para que tu presencia digital crezca con tu negocio.
+              El trabajo no termina con la entrega. Estamos disponibles para acompañarte, 
+              proponer mejoras y asegurarnos de que tu presencia digital siga creciendo.
             </p>
           </div>
         </motion.div>

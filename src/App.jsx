@@ -55,7 +55,7 @@ function App() {
            ========================================= */}
         <Route path="/landing-pages" element={
           <PaginaServicio
-            titulo="Landing Pages que Convierten"
+            titulo="Sitios Web que Convierten"
             subtitulo="Diseño Web Estratégico"
             descripcion="No es solo una web bonita. Diseñamos páginas de aterrizaje optimizadas psicológicamente para transformar visitantes en clientes. Ideales para campañas de Google Ads, lanzamientos de productos o captación de leads."
             detalles={[

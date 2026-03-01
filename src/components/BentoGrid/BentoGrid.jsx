@@ -166,11 +166,11 @@ export function BentoGrid() {
           transition={{ staggerChildren: 0.1 }}
           className="grilla-servicios"
         >
-          {/* 1. Landing Pages (Ancho Completo) */}
+          {/* 1. Sitios Web (Ancho Completo) */}
           <motion.div variants={variantes} className="tarjeta-bento ancho-completo tarjeta-acento">
             <Link to="/landing-pages" className="enlace-tarjeta" onClick={() => window.scrollTo(0, 0)}>
               <div className="info-tarjeta">
-                <div className="titulo-header"><Layout className="icono-lime" /><h3>Landing Pages</h3></div>
+                <div className="titulo-header"><Layout className="icono-lime" /><h3>Sitios Web</h3></div>
                 <p>Presencia profesional que convierte visitas en clientes.</p>
                 <ArrowUpRight className="flecha-link" />
               </div>

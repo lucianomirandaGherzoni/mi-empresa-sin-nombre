@@ -9,7 +9,7 @@ const navItems = [
   {
     label: "Productos",
     dropdown: [
-      { label: "Landing Pages", href: "/landing-pages" },
+      { label: "Sitios Web", href: "/landing-pages" },
       { label: "Invitaciones", href: "/invitaciones" },
       { label: "Turnos", href: "/turnos" },
       { label: "Cartas", href: "/cartas" },
