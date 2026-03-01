@@ -1,10 +1,38 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './QuienesSomos.css';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export function QuienesSomos() {
   const seccionRef = useRef(null);
   const estaEnVista = useInView(seccionRef, { once: true, margin: '-100px' });
+
+  // Reveal con clip-path escalonado en las tarjetas
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        '.tarjeta-quienes',
+        { clipPath: 'inset(0 0 100% 0)', opacity: 0, y: 20 },
+        {
+          clipPath: 'inset(0 0 0% 0)',
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          ease: 'power3.out',
+          stagger: 0.15,
+          scrollTrigger: {
+            trigger: '.grid-quienes-somos',
+            start: 'top 80%',
+            once: true,
+          },
+        }
+      );
+    }, seccionRef);
+    return () => ctx.revert();
+  }, []);
 
   return (
     <section id="quienes-somos" className="seccion-quienes-somos" ref={seccionRef}>

@@ -1,0 +1,144 @@
+/* ==========================================================================
+   FOOTER  animacion scroll-to-white con GSAP
+   ========================================================================== */
+
+.footer-root {
+  position: relative;
+  overflow: hidden;
+  background-color: #000000;
+  padding: 5rem 1.5rem 2.5rem;
+}
+
+/* Capa blanca que escala desde abajo, controlada por GSAP */
+.footer-fill {
+  position: absolute;
+  inset: 0;
+  background-color: #ffffff;
+  transform: scaleY(0);
+  transform-origin: bottom center;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Todo el contenido queda por encima del fill */
+.footer-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ---- Header ---- */
+.footer-header {
+  margin-bottom: 3.5rem;
+}
+
+.footer-logo-wrap {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 0.75rem;
+}
+
+.footer-logo {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.footer-logo-accent {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--color-secondary);
+}
+
+.footer-tagline {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  max-width: 360px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ---- Grid de links ---- */
+.footer-links-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (max-width: 640px) {
+  .footer-links-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-col:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+.footer-col-title {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  margin: 0 0 1.25rem 0;
+}
+
+.footer-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Textos animatables  color inicial blanco, GSAP los pasa a negro */
+.footer-animatable {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footer-link:hover {
+  opacity: 0.65;
+}
+
+.footer-social {
+  gap: 0.5rem;
+}
+
+/* ---- Separador ---- */
+.footer-divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 2rem;
+}
+
+/* ---- Bottom ---- */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.3);
+  margin: 0;
+}

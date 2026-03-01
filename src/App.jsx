@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 
 // --- COMPONENTES GLOBALES ---
 import { NavBar } from './components/NavBar/NavBar.jsx'
+import { Footer } from './components/Footer/Footer.jsx';
 import { Hero } from './components/Hero/Hero.jsx';
 import { QuienesSomos } from './components/QuienesSomos/QuienesSomos.jsx';
 import { FAQ } from './components/PreguntasFrecuentes/PreguntasFrecuentes.jsx';
@@ -22,11 +23,18 @@ import {
 import { PaginaServicio } from './components/PaginaServicio/PaginaServicio.jsx';
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (!hash) {
+      window.scrollTo(0, 0);
+    } else {
+      setTimeout(() => {
+        const el = document.querySelector(hash);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  }, [pathname, hash]);
 
   return null;
 }
@@ -408,6 +416,7 @@ function App() {
         } />
 
       </Routes>
+      <Footer />
     </Router>
   );
 }
