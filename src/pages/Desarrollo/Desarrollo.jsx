@@ -69,7 +69,7 @@ const PaginaDesarrollo = () => {
                 </li>
               </ul>
               <div className="acciones-hero">
-                <button className="boton-primario efecto-shimmer">Solicitar Cotización</button>
+                <button className="boton-primario">Ver ejemplo</button>
                 <button className="boton-secundario">Contactar por WhatsApp</button>
               </div>
             </motion.div>

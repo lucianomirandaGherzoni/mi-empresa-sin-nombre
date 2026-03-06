@@ -57,12 +57,12 @@
 
 .fade-left {
   left: 0;
-  background: linear-gradient(to right, #0D0D0D 0%, rgba(13, 13, 13, 0.8) 40%, transparent 100%);
+  background: linear-gradient(to right, #050509 0%, rgba(5, 5, 9, 0.8) 40%, transparent 100%);
 }
 
 .fade-right {
   right: 0;
-  background: linear-gradient(to left, #0D0D0D 0%, rgba(13, 13, 13, 0.8) 40%, transparent 100%);
+  background: linear-gradient(to left, #050509 0%, rgba(5, 5, 9, 0.8) 40%, transparent 100%);
 }
 
 /* --- La Pista de Animación --- */
