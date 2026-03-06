@@ -7,29 +7,7 @@ import "./Footer.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const linksSitio = [
-  { label: "Inicio", href: "/" },
-  { label: "Que hacemos", href: "/#que-hacemos" },
-  { label: "Quienes somos", href: "/#quienes-somos" },
-  { label: "Preguntas frecuentes", href: "/#faq" },
-];
-
-const linksServicios = [
-  { label: "Sitios Web", href: "/landing-pages" },
-  { label: "Invitaciones", href: "/invitaciones" },
-  { label: "Turnos", href: "/turnos" },
-  { label: "Cartas digitales", href: "/cartas" },
-  { label: "Desarrollo a medida", href: "/desarrollo" },
-];
-
-const redesSociales = [
-  { label: "Instagram", href: "#", icon: Instagram },
-  { label: "LinkedIn", href: "#", icon: Linkedin },
-  { label: "Email", href: "mailto:hola@origendigital.com", icon: Mail },
-  { label: "WhatsApp", href: "#", icon: Phone },
-];
-
-export function Footer() {
+const Footer = () => {
   const footerRef = useRef(null);
   const fillRef = useRef(null);
   const location = useLocation();
@@ -50,7 +28,7 @@ export function Footer() {
         scrollTrigger: {
           trigger: footer,
           start: isMobile ? "top 110%" : "top 95%",
-          end: isMobile ? "top 5%" : "top 15%",
+          end: "bottom bottom",
           scrub: 1.2,
           invalidateOnRefresh: true,
         },
@@ -62,13 +40,14 @@ export function Footer() {
       // 2. Textos principales: blanco -> negro
       tl.to(footer.querySelectorAll(".footer-animatable"), { color: "#111111", ease: "none" }, 0);
 
-      // 3. Titulos de columna
+
+      // 4. Titulos de columna
       tl.to(footer.querySelectorAll(".footer-col-title"), { color: "rgba(0,0,0,0.4)", ease: "none" }, 0);
 
-      // 4. Separador
+      // 5. Separador
       tl.to(footer.querySelector(".footer-divider"), { backgroundColor: "rgba(0,0,0,0.12)", ease: "none" }, 0);
 
-      // 5. Copyright
+      // 6. Copyright
       tl.to(footer.querySelectorAll(".footer-copy"), { color: "rgba(0,0,0,0.35)", ease: "none" }, 0);
     }, footer);
 
@@ -98,26 +77,39 @@ export function Footer() {
           <div className="footer-col">
             <h4 className="footer-col-title">Sitio</h4>
             <ul className="footer-link-list">
-              {linksSitio.map((l) => (
-                <li key={l.label}>
-                  <Link to={l.href} className="footer-link footer-animatable">
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link to="/" className="footer-link footer-animatable">Inicio</Link>
+              </li>
+              <li>
+                <Link to="/#que-hacemos" className="footer-link footer-animatable">Que hacemos</Link>
+              </li>
+              <li>
+                <Link to="/#quienes-somos" className="footer-link footer-animatable">Quienes somos</Link>
+              </li>
+              <li>
+                <Link to="/#faq" className="footer-link footer-animatable">Preguntas frecuentes</Link>
+              </li>
             </ul>
           </div>
 
           <div className="footer-col">
             <h4 className="footer-col-title">Servicios</h4>
             <ul className="footer-link-list">
-              {linksServicios.map((l) => (
-                <li key={l.label}>
-                  <Link to={l.href} className="footer-link footer-animatable">
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link to="/landing-pages" className="footer-link footer-animatable">Sitios Web</Link>
+              </li>
+              <li>
+                <Link to="/invitaciones" className="footer-link footer-animatable">Invitaciones</Link>
+              </li>
+              <li>
+                <Link to="/turnos" className="footer-link footer-animatable">Turnos</Link>
+              </li>
+              <li>
+                <Link to="/cartas" className="footer-link footer-animatable">Cartas digitales</Link>
+              </li>
+              <li>
+                <Link to="/desarrollo" className="footer-link footer-animatable">Desarrollo a medida</Link>
+              </li>
             </ul>
           </div>
 
@@ -125,34 +117,32 @@ export function Footer() {
             <h4 className="footer-col-title">Contacto</h4>
             <div className="footer-contact-grid">
               <ul className="footer-link-list">
-                {redesSociales.slice(0, 2).map(({ label, href, icon: Icon }) => (
-                  <li key={label}>
-                    <a
-                      href={href}
-                      className="footer-link footer-social footer-animatable"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Icon size={14} />
-                      {label}
-                    </a>
-                  </li>
-                ))}
+                <li>
+                  <a href="#" className="footer-link footer-social footer-animatable" target="_blank" rel="noopener noreferrer">
+                    <Instagram size={14} />
+                    Instagram
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="footer-link footer-social footer-animatable" target="_blank" rel="noopener noreferrer">
+                    <Linkedin size={14} />
+                    LinkedIn
+                  </a>
+                </li>
               </ul>
               <ul className="footer-link-list">
-                {redesSociales.slice(2).map(({ label, href, icon: Icon }) => (
-                  <li key={label}>
-                    <a
-                      href={href}
-                      className="footer-link footer-social footer-animatable"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Icon size={14} />
-                      {label}
-                    </a>
-                  </li>
-                ))}
+                <li>
+                  <a href="mailto:hola@origendigital.com" className="footer-link footer-social footer-animatable" target="_blank" rel="noopener noreferrer">
+                    <Mail size={14} />
+                    Email
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="footer-link footer-social footer-animatable" target="_blank" rel="noopener noreferrer">
+                    <Phone size={14} />
+                    WhatsApp
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -171,4 +161,6 @@ export function Footer() {
       </div>
     </footer>
   );
-}
+};
+
+export { Footer };

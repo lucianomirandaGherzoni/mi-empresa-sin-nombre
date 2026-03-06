@@ -4,30 +4,12 @@ import { motion } from "framer-motion";
 import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
 import "./NavBar.css";
 
-const navItems = [
-  { label: "Inicio", href: "/" },
-  {
-    label: "Productos",
-    dropdown: [
-      { label: "Sitios Web", href: "/landing-pages" },
-      { label: "Invitaciones", href: "/invitaciones" },
-      { label: "Turnos", href: "/turnos" },
-      { label: "Cartas", href: "/cartas" },
-      { label: "Desarrollo", href: "/desarrollo" }
-    ]
-  },
-  { label: "Qué hacemos", href: "/#que-hacemos" },
-  { label: "Quiénes somos", href: "/#quienes-somos" },
-  { label: "FAQ", href: "/#faq" },
-];
-
-export function NavBar() {
+const NavBar = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
   const [hiddenOnFooter, setHiddenOnFooter] = useState(false);
 
-  // Efecto para bloquear el scroll cuando el menú móvil está abierto (opcional)
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -36,7 +18,6 @@ export function NavBar() {
     }
   }, [mobileMenuOpen]);
 
-  // Ocultar navbar en móvil cuando el footer es visible
   useEffect(() => {
     const footer = document.querySelector('.footer-root');
     if (!footer) return;
@@ -63,45 +44,90 @@ export function NavBar() {
     >
       <nav className="navbar-container">
         {/* Logo */}
-       
         <Link to="/" className="logo-mobile"> Origen digital</Link>
 
         {/* Desktop Nav Items */}
         <div className="nav-links desktop-only">
-          {navItems.map((item, index) => (
-            item.dropdown ? (
-              <div className="nav-link nav-dropdown" key={item.label}>
-                <span className="nav-text">{item.label}</span>
-                <div className="dropdown-content">
-                  {item.dropdown.map((dropItem) => (
-                    <Link key={dropItem.label} to={dropItem.href} className="dropdown-link">
-                      {dropItem.label}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            ) : item.href ? (
-              <Link
-                key={item.label}
-                to={item.href}
-                className="nav-link"
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
-              >
-                {hoveredIndex === index && (
-                  <motion.div
-                    layoutId="navbar-hover"
-                    className="nav-hover-bg"
-                    initial={false}
-                    transition={{ type: "spring", stiffness: 500, damping: 30 }}
-                  />
-                )}
-                <span className="nav-text">{item.label}</span>
-              </Link>
-            ) : (
-              <span key={item.label} className="nav-link nav-text">{item.label}</span>
-            )
-          ))}
+
+          <Link
+            to="/"
+            className="nav-link"
+            onMouseEnter={() => setHoveredIndex(0)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            {hoveredIndex === 0 && (
+              <motion.div
+                layoutId="navbar-hover"
+                className="nav-hover-bg"
+                initial={false}
+                transition={{ type: "spring", stiffness: 500, damping: 30 }}
+              />
+            )}
+            <span className="nav-text">Inicio</span>
+          </Link>
+
+          <div className="nav-link nav-dropdown">
+            <span className="nav-text">Productos</span>
+            <div className="dropdown-content">
+              <Link to="/landing-pages" className="dropdown-link">Sitios Web</Link>
+              <Link to="/invitaciones" className="dropdown-link">Invitaciones</Link>
+              <Link to="/turnos" className="dropdown-link">Turnos</Link>
+              <Link to="/cartas" className="dropdown-link">Cartas</Link>
+              <Link to="/desarrollo" className="dropdown-link">Desarrollo</Link>
+            </div>
+          </div>
+
+          <Link
+            to="/#que-hacemos"
+            className="nav-link"
+            onMouseEnter={() => setHoveredIndex(2)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            {hoveredIndex === 2 && (
+              <motion.div
+                layoutId="navbar-hover"
+                className="nav-hover-bg"
+                initial={false}
+                transition={{ type: "spring", stiffness: 500, damping: 30 }}
+              />
+            )}
+            <span className="nav-text">Qué hacemos</span>
+          </Link>
+
+          <Link
+            to="/#quienes-somos"
+            className="nav-link"
+            onMouseEnter={() => setHoveredIndex(3)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            {hoveredIndex === 3 && (
+              <motion.div
+                layoutId="navbar-hover"
+                className="nav-hover-bg"
+                initial={false}
+                transition={{ type: "spring", stiffness: 500, damping: 30 }}
+              />
+            )}
+            <span className="nav-text">Quiénes somos</span>
+          </Link>
+
+          <Link
+            to="/#faq"
+            className="nav-link"
+            onMouseEnter={() => setHoveredIndex(4)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            {hoveredIndex === 4 && (
+              <motion.div
+                layoutId="navbar-hover"
+                className="nav-hover-bg"
+                initial={false}
+                transition={{ type: "spring", stiffness: 500, damping: 30 }}
+              />
+            )}
+            <span className="nav-text">FAQ</span>
+          </Link>
+
         </div>
 
         {/* CTA Buttons (Desktop) */}
@@ -127,71 +153,101 @@ export function NavBar() {
           exit={{ opacity: 0, y: -10 }}
           className="mobile-menu-dropdown"
         >
-          
           <div className="mobile-nav-list">
-            {navItems.map((item) =>
-              item.dropdown ? (
-                <div key={item.label} className="mobile-nav-group">
-                  <button
-                    className="mobile-nav-link"
-                    style={{
-                      background: 'none',
-                      border: 'none',
-                      width: '100%',
-                      textAlign: 'left',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'space-between',
-                      gap: '0.5rem',
-                    }}
-                    onClick={() => setMobileDropdownOpen((open) => !open)}
-                    aria-expanded={mobileDropdownOpen}
-                  >
-                    <span>{item.label}</span>
-                    {mobileDropdownOpen ? <ChevronUp size={18} style={{ color: '#B5A2D2', transition: 'transform 0.2s' }} /> : <ChevronDown size={18} style={{ color: '#B5A2D2', transition: 'transform 0.2s' }} />}
-                  </button>
-                  {mobileDropdownOpen && (
-                    <div
-                      style={{
-                        border: '1px solid #B5A2D2',
-                        borderRadius: '0.75rem',
-                        margin: '0.25rem 0',
-                        background: 'rgba(9,9,11,0.92)',
-                        boxShadow: '0 4px 16px rgba(181,162,210,0.08)',
-                        overflow: 'hidden',
-                      }}
-                    >
-                      {item.dropdown.map((dropItem) => (
-                        <Link
-                          key={dropItem.label}
-                          to={dropItem.href}
-                          className="mobile-nav-link"
-                          style={{
-                            display: 'block',
-                            width: '100%',
-                            textAlign: 'left',
-                            borderBottom: '1px solid rgba(181,162,210,0.12)',
-                            margin: 0,
-                          }}
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          {dropItem.label}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <Link
-                  key={item.label}
-                  to={item.href}
-                  className="mobile-nav-link"
-                  onClick={() => setMobileMenuOpen(false)}
+
+            <Link to="/" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>
+              Inicio
+            </Link>
+
+            <div className="mobile-nav-group">
+              <button
+                className="mobile-nav-link"
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  width: '100%',
+                  textAlign: 'left',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  gap: '0.5rem',
+                }}
+                onClick={() => setMobileDropdownOpen((open) => !open)}
+                aria-expanded={mobileDropdownOpen}
+              >
+                <span>Productos</span>
+                {mobileDropdownOpen
+                  ? <ChevronUp size={18} style={{ color: '#B5A2D2', transition: 'transform 0.2s' }} />
+                  : <ChevronDown size={18} style={{ color: '#B5A2D2', transition: 'transform 0.2s' }} />
+                }
+              </button>
+              {mobileDropdownOpen && (
+                <div
+                  style={{
+                    border: '1px solid #B5A2D2',
+                    borderRadius: '0.75rem',
+                    margin: '0.25rem 0',
+                    background: 'rgba(9,9,11,0.92)',
+                    boxShadow: '0 4px 16px rgba(181,162,210,0.08)',
+                    overflow: 'hidden',
+                  }}
                 >
-                  {item.label}
-                </Link>
-              )
-            )}
+                  <Link
+                    to="/landing-pages"
+                    className="mobile-nav-link"
+                    style={{ display: 'block', width: '100%', textAlign: 'left', borderBottom: '1px solid rgba(181,162,210,0.12)', margin: 0 }}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Sitios Web
+                  </Link>
+                  <Link
+                    to="/invitaciones"
+                    className="mobile-nav-link"
+                    style={{ display: 'block', width: '100%', textAlign: 'left', borderBottom: '1px solid rgba(181,162,210,0.12)', margin: 0 }}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Invitaciones
+                  </Link>
+                  <Link
+                    to="/turnos"
+                    className="mobile-nav-link"
+                    style={{ display: 'block', width: '100%', textAlign: 'left', borderBottom: '1px solid rgba(181,162,210,0.12)', margin: 0 }}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Turnos
+                  </Link>
+                  <Link
+                    to="/cartas"
+                    className="mobile-nav-link"
+                    style={{ display: 'block', width: '100%', textAlign: 'left', borderBottom: '1px solid rgba(181,162,210,0.12)', margin: 0 }}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Cartas
+                  </Link>
+                  <Link
+                    to="/desarrollo"
+                    className="mobile-nav-link"
+                    style={{ display: 'block', width: '100%', textAlign: 'left', margin: 0 }}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Desarrollo
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            <Link to="/#que-hacemos" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>
+              Qué hacemos
+            </Link>
+
+            <Link to="/#quienes-somos" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>
+              Quiénes somos
+            </Link>
+
+            <Link to="/#faq" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>
+              FAQ
+            </Link>
+
             <div className="divider" />
             <button className="btn btn-primary w-full shimmer-effect">Cotizar Proyecto</button>
           </div>
@@ -199,4 +255,6 @@ export function NavBar() {
       )}
     </motion.header>
   );
-}
+};
+
+export { NavBar };

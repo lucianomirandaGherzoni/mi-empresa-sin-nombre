@@ -27,12 +27,9 @@ export const InterfazLanding = () => (
         </div>
       </div>
       <div className="grid-features-falsa">
-        {[1, 2, 3].map(i => (
-          <div key={i} className="card-feature">
-            <div className="icono-feature" />
-            <div className="texto-feature" />
-          </div>
-        ))}
+          <div className="card-feature"><div className="icono-feature" /><div className="texto-feature" /></div>
+          <div className="card-feature"><div className="icono-feature" /><div className="texto-feature" /></div>
+          <div className="card-feature"><div className="icono-feature" /><div className="texto-feature" /></div>
       </div>
     </div>
   </div>
@@ -61,11 +58,34 @@ export const InterfazCalendario = () => (
       <div className="puntos-nav"><span className="punto-nav" /><span className="punto-nav" /></div>
     </div>
     <div className="grid-dias">
-      {Array.from({ length: 28 }, (_, i) => (
-        <div key={i} className={`dia-cal ${i === 15 ? 'dia-activo' : ''}`}>
-          {i + 1}
-        </div>
-      ))}
+      <div className="dia-cal">1</div>
+      <div className="dia-cal">2</div>
+      <div className="dia-cal">3</div>
+      <div className="dia-cal">4</div>
+      <div className="dia-cal">5</div>
+      <div className="dia-cal">6</div>
+      <div className="dia-cal">7</div>
+      <div className="dia-cal">8</div>
+      <div className="dia-cal">9</div>
+      <div className="dia-cal">10</div>
+      <div className="dia-cal">11</div>
+      <div className="dia-cal">12</div>
+      <div className="dia-cal">13</div>
+      <div className="dia-cal">14</div>
+      <div className="dia-cal">15</div>
+      <div className="dia-cal dia-activo">16</div>
+      <div className="dia-cal">17</div>
+      <div className="dia-cal">18</div>
+      <div className="dia-cal">19</div>
+      <div className="dia-cal">20</div>
+      <div className="dia-cal">21</div>
+      <div className="dia-cal">22</div>
+      <div className="dia-cal">23</div>
+      <div className="dia-cal">24</div>
+      <div className="dia-cal">25</div>
+      <div className="dia-cal">26</div>
+      <div className="dia-cal">27</div>
+      <div className="dia-cal">28</div>
     </div>
     <div className="lista-turnos">
       <div className="item-turno"><span className="hora-turno">10:00</span><span className="estado-turno">Libre</span></div>
@@ -138,7 +158,7 @@ export const InterfazDesarrollo = () => (
 
 // --- COMPONENTE PRINCIPAL ---
 
-export function BentoGrid() {
+const BentoGrid = () => {
   const ref = useRef(null);
   const estaEnVista = useInView(ref, { once: true, margin: "-100px" });
 
@@ -230,4 +250,6 @@ export function BentoGrid() {
       </div>
     </section>
   );
-}
+};
+
+export { BentoGrid };

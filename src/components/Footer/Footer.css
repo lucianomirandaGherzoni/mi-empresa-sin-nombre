@@ -18,6 +18,7 @@
   transform-origin: bottom center;
   z-index: 0;
   pointer-events: none;
+  
 }
 
 /* Todo el contenido queda por encima del fill */
@@ -57,10 +58,10 @@
 
 .footer-tagline {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.5);
   max-width: 360px;
   line-height: 1.6;
   margin: 0;
+  /* El color lo maneja .footer-animatable + GSAP para la transicion scroll-to-white */
 }
 
 /* ---- Grid de links ---- */

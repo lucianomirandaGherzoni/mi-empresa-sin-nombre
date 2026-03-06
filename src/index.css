@@ -145,3 +145,21 @@ img, svg {
   display: block;
   max-width: 100%;
 }
+
+/* ==========================================================================
+   MOCKUP HERO — PÁGINAS DE SERVICIO
+   ========================================================================== */
+
+.mockup-hero {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .mockup-hero {
+    max-width: 100%;
+    margin: 0;
+  }
+}

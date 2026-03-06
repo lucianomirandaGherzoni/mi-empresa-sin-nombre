@@ -56,7 +56,7 @@
 }
 
 .cabecera-seccion .titulo-seccion-principal {
-    font-size: var(--text-3xl);
+    font-size: var(--text-2xl);
     color: var(--text-white);
     font-weight: 600;
     letter-spacing: -0.04em;

@@ -2,50 +2,7 @@ import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import './Precios.css';
 
-const planes = [
-  {
-    nombre: 'Landing Page',
-    descripcion: 'Perfecta para presentar tu negocio online',
-    precio: { mensual: 150000, anual: 150000 },
-    caracteristicas: ['Diseño responsive', 'Optimización SEO', 'Formulario de contacto', '3 secciones personalizadas', 'Entrega en 7 días'],
-    accion: 'Solicitar',
-    destacado: false,
-  },
-  {
-    nombre: 'Sistema de Gestión',
-    descripcion: 'Turnos, reservas o gestión de pedidos',
-    precio: { mensual: 350000, anual: 300000 },
-    caracteristicas: [
-      'Panel de administración',
-      'Sistema de turnos/pedidos',
-      'Notificaciones automáticas',
-      'Reportes y estadísticas',
-      'Base de datos incluida',
-      'Soporte por 3 meses',
-      'Capacitación incluida',
-    ],
-    accion: 'Consultar',
-    destacado: true,
-  },
-  {
-    nombre: 'Desarrollo a Medida',
-    descripcion: 'Solución personalizada para tu negocio',
-    precio: { mensual: 0, anual: 0 },
-    caracteristicas: [
-      'Análisis de requerimientos',
-      'Diseño personalizado',
-      'Desarrollo completo',
-      'Testing exhaustivo',
-      'Documentación técnica',
-      'Soporte continuo',
-      'Escalabilidad garantizada',
-    ],
-    accion: 'Cotizar Proyecto',
-    destacado: false,
-  },
-];
-
-export function Precios() {
+const Precios = () => {
   const seccionRef = useRef(null);
   const estaEnVista = useInView(seccionRef, { once: true, margin: '-100px' });
   const [cicloFacturacion, setCicloFacturacion] = useState('mensual');
@@ -101,53 +58,203 @@ export function Precios() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="cuadricula-precios"
         >
-          {planes.map((plan, indice) => (
-            <motion.div
-              key={plan.nombre}
-              initial={{ opacity: 0, y: 20 }}
-              animate={estaEnVista ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.3 + indice * 0.1 }}
-              className={`tarjeta-precios ${plan.destacado ? 'destacada' : ''}`}
-            >
-              {plan.destacado && <div className="etiqueta-popular">Más Solicitado</div>}
 
-              <div className="cabecera-tarjeta">
-                <h3 className="nombre-plan">{plan.nombre}</h3>
-                <p className="descripcion-plan">{plan.descripcion}</p>
+          {/* — Plan 1: Landing Page — */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={estaEnVista ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="tarjeta-precios"
+          >
+            <div className="cabecera-tarjeta">
+              <h3 className="nombre-plan">Landing Page</h3>
+              <p className="descripcion-plan">Perfecta para presentar tu negocio online</p>
+            </div>
+            <div className="contenedor-precio">
+              <div className="monto-precio">
+                <span className="cifra-precio">$150.000</span>
+                <span className="periodo-precio"> ARS</span>
               </div>
+            </div>
+            <ul className="lista-caracteristicas">
+              <li className="item-caracteristica">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                Diseño responsive
+              </li>
+              <li className="item-caracteristica">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                Optimización SEO
+              </li>
+              <li className="item-caracteristica">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                Formulario de contacto
+              </li>
+              <li className="item-caracteristica">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                3 secciones personalizadas
+              </li>
+              <li className="item-caracteristica">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                Entrega en 7 días
+              </li>
+            </ul>
+            <button className="boton-precio">Solicitar</button>
+          </motion.div>
 
-              <div className="contenedor-precio">
-                <div className="monto-precio">
-                  {plan.precio[cicloFacturacion] > 0 ? (
-                    <>
-                      <span className="cifra-precio">${plan.precio[cicloFacturacion].toLocaleString('es-AR')}</span>
-                      <span className="periodo-precio"> ARS</span>
-                    </>
-                  ) : (
-                    <span className="cifra-precio">A cotizar</span>
-                  )}
-                </div>
-                {cicloFacturacion === 'anual' && plan.precio.anual > 0 && (
-                  <p className="nota-precio">Incluye hosting y mantenimiento anual</p>
+          {/* — Plan 2: Sistema de Gestión (destacado) — */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={estaEnVista ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="tarjeta-precios destacada"
+          >
+            <div className="etiqueta-popular">Más Solicitado</div>
+            <div className="cabecera-tarjeta">
+              <h3 className="nombre-plan">Sistema de Gestión</h3>
+              <p className="descripcion-plan">Turnos, reservas o gestión de pedidos</p>
+            </div>
+            <div className="contenedor-precio">
+              <div className="monto-precio">
+                {cicloFacturacion === 'mensual' ? (
+                  <>
+                    <span className="cifra-precio">$350.000</span>
+                    <span className="periodo-precio"> ARS</span>
+                  </>
+                ) : (
+                  <>
+                    <span className="cifra-precio">$300.000</span>
+                    <span className="periodo-precio"> ARS</span>
+                  </>
                 )}
               </div>
+              {cicloFacturacion === 'anual' && (
+                <p className="nota-precio">Incluye hosting y mantenimiento anual</p>
+              )}
+            </div>
+            <ul className="lista-caracteristicas">
+              <li className="item-caracteristica">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                Panel de administración
+              </li>
+              <li className="item-caracteristica">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                Sistema de turnos/pedidos
+              </li>
+              <li className="item-caracteristica">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                Notificaciones automáticas
+              </li>
+              <li className="item-caracteristica">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                Reportes y estadísticas
+              </li>
+              <li className="item-caracteristica">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                Base de datos incluida
+              </li>
+              <li className="item-caracteristica">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                Soporte por 3 meses
+              </li>
+              <li className="item-caracteristica">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                Capacitación incluida
+              </li>
+            </ul>
+            <button className="boton-precio efecto-brillo">Consultar</button>
+          </motion.div>
 
-              <ul className="lista-caracteristicas">
-                {plan.caracteristicas.map((item) => (
-                  <li key={item} className="item-caracteristica">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                      <path d="M20 6L9 17l-5-5" />
-                    </svg>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+          {/* — Plan 3: Desarrollo a Medida — */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={estaEnVista ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="tarjeta-precios"
+          >
+            <div className="cabecera-tarjeta">
+              <h3 className="nombre-plan">Desarrollo a Medida</h3>
+              <p className="descripcion-plan">Solución personalizada para tu negocio</p>
+            </div>
+            <div className="contenedor-precio">
+              <div className="monto-precio">
+                <span className="cifra-precio">A cotizar</span>
+              </div>
+            </div>
+            <ul className="lista-caracteristicas">
+              <li className="item-caracteristica">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                Análisis de requerimientos
+              </li>
+              <li className="item-caracteristica">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                Diseño personalizado
+              </li>
+              <li className="item-caracteristica">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                Desarrollo completo
+              </li>
+              <li className="item-caracteristica">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                Testing exhaustivo
+              </li>
+              <li className="item-caracteristica">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                Documentación técnica
+              </li>
+              <li className="item-caracteristica">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                Soporte continuo
+              </li>
+              <li className="item-caracteristica">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                Escalabilidad garantizada
+              </li>
+            </ul>
+            <button className="boton-precio">Cotizar Proyecto</button>
+          </motion.div>
 
-              <button className={`boton-precio ${plan.destacado ? 'efecto-brillo' : ''}`}>{plan.accion}</button>
-            </motion.div>
-          ))}
         </motion.div>
       </div>
     </section>
   );
-}
+};
+
+export { Precios };

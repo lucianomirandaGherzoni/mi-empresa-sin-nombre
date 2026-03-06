@@ -3,34 +3,7 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
 import "./PreguntasFrecuentes.css";
 
-const listaDePreguntas = [
-  {
-    pregunta: "¿Cuánto tiempo tarda un proyecto?",
-    respuesta: "Depende del servicio. Una landing page puede estar lista en 5-7 dias habiles. Invitaciones digitales en 3-5 dias. Sistemas como gestion de turnos o cartas digitales entre 2-4 semanas. Para desarrollo a medida, armamos un cronograma personalizado segun la complejidad.",
-  },
-  {
-    pregunta: "¿Ofrecen mantenimiento después de la entrega?",
-    respuesta: "Si. Todos nuestros planes incluyen un periodo de soporte post-entrega que varia segun el servicio. Ademas ofrecemos planes de mantenimiento mensual para actualizaciones, backups y soporte tecnico continuo.",
-  },
-  {
-    pregunta: "¿Puedo ver avances del proyecto mientras se desarrolla?",
-    respuesta: "Por supuesto. Trabajamos con metodologias agiles y compartimos avances semanales. Vas a poder ver el progreso en tiempo real y dar feedback en cada etapa para asegurarnos de que el resultado sea exactamente lo que necesitas.",
-  },
-  {
-    pregunta: "¿Qué tecnologías utilizan?",
-    respuesta: "Trabajamos con las tecnologias mas modernas del mercado: React, Next.js, Node.js, TypeScript, PostgreSQL, entre otras. Elegimos la mejor herramienta segun las necesidades de cada proyecto para garantizar rendimiento, seguridad y escalabilidad.",
-  },
-  {
-    pregunta: "¿Trabajan solo con clientes de Bariloche?",
-    respuesta: "No. Si bien estamos basados en Bariloche, trabajamos con clientes de toda Argentina y el exterior. Las reuniones las hacemos por videollamada y toda la comunicacion es online, lo que nos permite atender proyectos de cualquier ubicacion.",
-  },
-  {
-    pregunta: "¿Cómo es el proceso de pago?",
-    respuesta: "Generalmente trabajamos con un esquema de 50% al inicio del proyecto y 50% contra entrega. Para proyectos mas grandes, podemos acordar pagos en etapas. Aceptamos transferencia bancaria, Mercado Pago y cripto.",
-  },
-];
-
-function ItemDePregunta({ pregunta, respuesta, estaAbierto, alAlternar }) {
+const ItemDePregunta = ({ pregunta, respuesta, estaAbierto, alAlternar }) => {
   return (
     <div className="contenedor-item-faq">
       <button onClick={alAlternar} className="boton-desplegable-faq">
@@ -58,10 +31,36 @@ function ItemDePregunta({ pregunta, respuesta, estaAbierto, alAlternar }) {
       </AnimatePresence>
     </div>
   );
-}
+};
 
-// Exportamos como FAQ para que coincida con App.jsx
-export function FAQ() {
+const listaDePreguntas = [
+  {
+    pregunta: "¿Cuánto tiempo tarda un proyecto?",
+    respuesta: "Depende del servicio. Una landing page puede estar lista en 5-7 dias habiles. Invitaciones digitales en 3-5 dias. Sistemas como gestion de turnos o cartas digitales entre 2-4 semanas. Para desarrollo a medida, armamos un cronograma personalizado segun la complejidad.",
+  },
+  {
+    pregunta: "¿Ofrecen mantenimiento después de la entrega?",
+    respuesta: "Si. Todos nuestros planes incluyen un periodo de soporte post-entrega que varia segun el servicio. Ademas ofrecemos planes de mantenimiento mensual para actualizaciones, backups y soporte tecnico continuo.",
+  },
+  {
+    pregunta: "¿Puedo ver avances del proyecto mientras se desarrolla?",
+    respuesta: "Por supuesto. Trabajamos con metodologias agiles y compartimos avances semanales. Vas a poder ver el progreso en tiempo real y dar feedback en cada etapa para asegurarnos de que el resultado sea exactamente lo que necesitas.",
+  },
+  {
+    pregunta: "¿Qué tecnologías utilizan?",
+    respuesta: "Trabajamos con las tecnologias mas modernas del mercado: React, Next.js, Node.js, TypeScript, PostgreSQL, entre otras. Elegimos la mejor herramienta segun las necesidades de cada proyecto para garantizar rendimiento, seguridad y escalabilidad.",
+  },
+  {
+    pregunta: "¿Trabajan solo con clientes de Bariloche?",
+    respuesta: "No. Si bien estamos basados en Bariloche, trabajamos con clientes de toda Argentina y el exterior. Las reuniones las hacemos por videollamada y toda la comunicacion es online, lo que nos permite atender proyectos de cualquier ubicacion.",
+  },
+  {
+    pregunta: "¿Cómo es el proceso de pago?",
+    respuesta: "Generalmente trabajamos con un esquema de 50% al inicio del proyecto y 50% contra entrega. Para proyectos mas grandes, podemos acordar pagos en etapas. Aceptamos transferencia bancaria, Mercado Pago y cripto.",
+  },
+];
+
+const FAQ = () => {
   const seccionRef = useRef(null);
   const estaEnVista = useInView(seccionRef, { once: true, margin: "-100px" });
   const [indiceAbierto, setIndiceAbierto] = useState(0);
@@ -100,4 +99,6 @@ export function FAQ() {
       </div>
     </section>
   );
-}
+};
+
+export { FAQ };
