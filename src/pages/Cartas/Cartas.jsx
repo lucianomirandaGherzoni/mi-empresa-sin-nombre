@@ -40,7 +40,7 @@ const PaginaCartas = () => {
               <p className="etiqueta-seccion subtitulo-servicio">Adiós al menú plastificado</p>
               <h1 className="titulo-servicio">Tu carta siempre actualizada</h1>
               <p className="descripcion-servicio">
-                Tus clientes escanean el QR y ven el menú en segundos. Vos actualizás precios al instante desde el celular y nadie ve información desactualizada nunca más.
+                Tus clientes escanean el QR y ven el menú en segundos. Diseñado para vender más: fotos atractivas, categorías fáciles de navegar y la posibilidad de actualizar precios o productos en segundos desde tu celular.
               </p>
               <ul className="lista-detalles">
                 <li className="item-detalle">

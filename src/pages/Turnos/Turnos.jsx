@@ -16,6 +16,18 @@ const preguntas = [
         pregunta: "¿Puedo exportar mi agenda o la base de clientes?",
         respuesta: "Podés descargar la información clave de turnos y clientes en formatos compatibles con Excel o Google Sheets para hacer tus propios reportes. Si tenés un CRM o sistema externo, también podemos evaluar integraciones a medida.",
     },
+    {
+        pregunta: "¿Puedo gestionar todos los turnos de mi equipo desde un solo lugar?",
+        respuesta: "Sí, nuestro panel te permite ver y organizar los horarios de todos tus profesionales, asignar turnos y optimizar la disponibilidad, todo en un mismo lugar.",
+    },
+    {
+        pregunta: "¿El sistema me ayuda a reducir cancelaciones y ausencias?",
+        respuesta: "¡Sí! Con recordatorios automáticos por WhatsApp y mail, tus clientes pueden reprogramar sus turnos sin cancelarlos, reduciendo al mínimo las inasistencias. Además podés implementar políticas de cancelación flexibles, como pagos por adelantado o reservas, para que tu agenda esté siempre completa y organizada.",
+    },
+    {
+        pregunta: "¿Puedo personalizar horarios, servicios y profesionales?",
+        respuesta: "Sí, podés configurar cada servicio, su duración, precios y disponibilidad de cada profesional, adaptándolo a tu negocio y flujo de clientes.",
+    },
 ];
 
 const PaginaTurnos = () => {
