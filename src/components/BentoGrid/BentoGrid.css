@@ -8,11 +8,23 @@
     overflow: hidden;
 }
 
+.seccion-bento::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent 0%, #050509 100%);
+    pointer-events: none;
+    z-index: 20;
+}
+
 .bento-fondo-gradiente {
     position: absolute;
     inset: 0;
     background-color: var(--bg-dark-2);
-    background-image: radial-gradient(60% 50% at 50% 60%, rgba(181, 162, 210, 0.12) 0%, rgba(181, 162, 210, 0) 100%);
+    background-image: radial-gradient(60% 50% at 50% 60%, rgba(181, 162, 210, 0.03) 0%, rgba(181, 162, 210, 0) 100%);
     pointer-events: none;
     z-index: 0;
 }
@@ -24,9 +36,9 @@
         linear-gradient(to right, var(--grid-lines) 1px, transparent 1px),
         linear-gradient(to bottom, var(--grid-lines) 1px, transparent 1px);
     background-size: 46px 38px;
-    opacity: 0.4;
-    -webkit-mask-image: radial-gradient(ellipse 75% 55% at 50% 62%, black 0%, transparent 80%);
-    mask-image: radial-gradient(ellipse 75% 55% at 50% 62%, black 0%, transparent 80%);
+    opacity: 0.75;
+    -webkit-mask-image: radial-gradient(ellipse 85% 65% at 50% 58%, black 0%, transparent 82%);
+    mask-image: radial-gradient(ellipse 85% 65% at 50% 58%, black 0%, transparent 82%);
     pointer-events: none;
     z-index: 1;
 }
@@ -56,9 +68,9 @@
 }
 
 .cabecera-seccion .titulo-seccion-principal {
-    font-size: var(--text-2xl);
+    font-size: var(--text-3xl);
     color: var(--text-white);
-    font-weight: 600;
+    font-weight: 300;
     letter-spacing: -0.04em;
     font-family: var(--font-display);
 }

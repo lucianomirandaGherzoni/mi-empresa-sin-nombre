@@ -5,12 +5,22 @@
   overflow: hidden;
 }
 
+.seccion-quienes-somos::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent 0%, #050509 100%);
+  pointer-events: none;
+  z-index: 20;
+}
+
 .quienes-fondo-gradiente {
   position: absolute;
   inset: 0;
   background-color: var(--bg-dark-3);
-  background-image: radial-gradient(100% 80% at 50% 0%, rgba(181, 162, 210, 0.2) 0%, rgba(181, 162, 210, 0) 40%);
-  opacity: 0.85;
   pointer-events: none;
   z-index: 1;
 }
@@ -51,17 +61,17 @@
   border: none;
   font-size: var(--text-xs);
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
   color: var(--color-secondary);
   background: transparent;
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .titulo-quienes-somos {
   margin-top: 1.25rem;
   font-size: var(--text-3xl);
-  font-weight: 600;
+  font-weight: 300;
   letter-spacing: -0.04em;
   color: var(--text-white-soft);
   font-family: var(--font-display);
@@ -90,31 +100,52 @@
   border: 1px solid var(--border-dark-1);
   box-shadow:
     0 18px 40px rgba(0, 0, 0, 0.8),
-    0 0 0 1px rgba(15, 23, 42, 0.9);
+    0 0 0 1px rgba(15, 23, 42, 0.9),
+    0 0 22px rgba(181, 162, 210, 0.06);
   position: relative;
   overflow: hidden;
-  will-change: clip-path, transform, opacity;
-  transition: box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+  will-change: transform, opacity;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
               border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Gradiente interior esquina superior izquierda */
 .tarjeta-quienes::before {
   content: '';
   position: absolute;
   inset: -40%;
-  background: radial-gradient(circle at top left, rgba(181, 162, 210, 0.28), transparent 55%);
-  opacity: 0;
-  transition: opacity 0.4s ease;
+  background: radial-gradient(circle at top left, rgba(181, 162, 210, 0.22), transparent 55%);
+  opacity: 1;
   pointer-events: none;
 }
 
-.tarjeta-quienes:hover {
-  border-color: var(--color-secondary);
-  transform: translateY(-6px);
+/* Línea brillante en el borde superior */
+.tarjeta-quienes::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15%;
+  right: 15%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(181, 162, 210, 0.6) 50%, transparent);
+  pointer-events: none;
+  transition: opacity 0.35s ease;
 }
 
-.tarjeta-quienes:hover::before {
+.tarjeta-quienes:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 24px 50px rgba(0, 0, 0, 0.85),
+    0 0 0 1px rgba(181, 162, 210, 0.2),
+    0 0 35px rgba(181, 162, 210, 0.12);
+  border-color: rgba(181, 162, 210, 0.2);
+}
+
+.tarjeta-quienes:hover::after {
   opacity: 1;
+  left: 10%;
+  right: 10%;
 }
 
 .tarjeta-quienes h3 {

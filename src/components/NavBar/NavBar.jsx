@@ -132,7 +132,7 @@ const NavBar = () => {
 
         {/* CTA Buttons (Desktop) */}
         <div className="nav-actions desktop-only">
-          <button className="btn btn-primary shimmer-effect">Cotizar Proyecto</button>
+          <button className="btn btn-outline-lila">Cotizar Proyecto</button>
         </div>
 
         {/* Mobile Menu Toggle */}

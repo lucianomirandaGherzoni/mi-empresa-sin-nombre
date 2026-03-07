@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Check, Plus, Minus } from "lucide-react";
+import { Check, Plus, Minus, Palette, Share2, ListChecks } from "lucide-react";
 import { Link } from "react-router-dom";
 import "./Invitaciones.css";
 
@@ -210,26 +210,80 @@ const PaginaInvitaciones = () => {
                 </div>
             </section>
 
-            {/* CTA */}
-            <section className="seccion-cta-servicio">
-                <div className="cta-fondo-gradiente" />
-                <div className="cta-grid-fondo" />
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="contenedor-cta"
-                >
-                    <p className="etiqueta-seccion etiqueta-cta">Próximo paso</p>
-                    <h2 className="titulo-seccion-principal cta-titulo">¿Tenés un proyecto en mente?</h2>
-                    <p className="descripcion-cta">
-                        Contanos tu idea, el estado actual de tu negocio y qué querés lograr en los próximos meses. Con esa información armamos una propuesta sin compromiso, con pasos claros, tiempos estimados y rangos de inversión adaptados a tu realidad.
-                    </p>
-                    <div className="acciones-cta">
-                        <button className="boton-primario efecto-shimmer grande">Agendar Consulta Gratis</button>
-                        <Link to="/" className="link-volver">Volver al inicio</Link>
+            {/* CÓMO FUNCIONA */}
+            <section className="seccion-como-funciona">
+                <div className="como-funciona-fondo" />
+                <div className="como-funciona-grid" />
+                <div className="contenedor-limitado">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="encabezado-centro"
+                    >
+                        <p className="etiqueta-seccion">Así funciona</p>
+                        <h2 className="titulo-seccion-principal">Crear tu invitación es fácil</h2>
+                        <p className="subtitulo-como-funciona">Un solo lugar para diseñar, compartir y organizar todo.</p>
+                    </motion.div>
+
+                    <div className="grilla-pasos">
+                        <motion.div
+                            initial={{ opacity: 0, y: 24 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.55, delay: 0 }}
+                            className="tarjeta-paso"
+                        >
+                            <div className="cabecera-tarjeta-paso">
+                                <div className="icono-paso"><Palette size={18} /></div>
+                            </div>
+                            <p className="etiqueta-paso">Paso 1</p>
+                            <h3 className="titulo-paso">Elegís un diseño y lo adaptás a tu evento</h3>
+                            <p className="desc-paso">Arrancás desde una plantilla y cambiás textos, colores y secciones a tu ritmo. No necesitás saber diseñar.</p>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 24 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.55, delay: 0.1 }}
+                            className="tarjeta-paso"
+                        >
+                            <div className="cabecera-tarjeta-paso">
+                                <div className="icono-paso"><Share2 size={18} /></div>
+                            </div>
+                            <p className="etiqueta-paso">Paso 2</p>
+                            <h3 className="titulo-paso">Compartís un solo link con tus invitados</h3>
+                            <p className="desc-paso">Mandalo por WhatsApp, email o redes. Siempre acceden a la versión más actualizada.</p>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 24 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.55, delay: 0.2 }}
+                            className="tarjeta-paso"
+                        >
+                            <div className="cabecera-tarjeta-paso">
+                                <div className="icono-paso"><ListChecks size={18} /></div>
+                            </div>
+                            <p className="etiqueta-paso">Paso 3</p>
+                            <h3 className="titulo-paso">Recibís confirmaciones y lo tenés todo ordenado</h3>
+                            <p className="desc-paso">Cada respuesta se registra en un solo lugar. Sin registros manuales ni reenviar mensajes.</p>
+                        </motion.div>
                     </div>
-                </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 16 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.25 }}
+                        className="acciones-como-funciona"
+                    >
+                        <button className="boton-primario grande">Empezar ahora</button>
+                    </motion.div>
+                </div>
             </section>
 
         </main>

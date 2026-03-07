@@ -15,7 +15,6 @@
 .seccion-llamado {
     padding: 6rem 1rem;
     background-color: var(--bg-dark-2);
-    border-top: 1px solid var(--border-dark-1);
 }
 
 .contenedor-llamado {

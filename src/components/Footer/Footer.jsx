@@ -27,7 +27,7 @@ const Footer = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: footer,
-          start: isMobile ? "top 110%" : "top 95%",
+          start: isMobile ? "top 100%" : "top 100%",
           end: "bottom bottom",
           scrub: 1.2,
           invalidateOnRefresh: true,
@@ -38,17 +38,36 @@ const Footer = () => {
       tl.fromTo(fill, { scaleY: 0 }, { scaleY: 1, ease: "none" }, 0);
 
       // 2. Textos principales: blanco -> negro
-      tl.to(footer.querySelectorAll(".footer-animatable"), { color: "#111111", ease: "none" }, 0);
+      tl.fromTo(
+        ".footer-animatable",
+        { color: "rgba(255,255,255,0.75)" },
+        { color: "#111111", ease: "none" },
+        0
+      );
 
+      // 3. Titulos de columna
+      tl.fromTo(
+        ".footer-col-title",
+        { color: "rgba(255,255,255,0.35)" },
+        { color: "rgba(0,0,0,0.4)", ease: "none" },
+        0
+      );
 
-      // 4. Titulos de columna
-      tl.to(footer.querySelectorAll(".footer-col-title"), { color: "rgba(0,0,0,0.4)", ease: "none" }, 0);
+      // 4. Separador
+      tl.fromTo(
+        ".footer-divider",
+        { backgroundColor: "rgba(255,255,255,0.1)" },
+        { backgroundColor: "rgba(0,0,0,0.12)", ease: "none" },
+        0
+      );
 
-      // 5. Separador
-      tl.to(footer.querySelector(".footer-divider"), { backgroundColor: "rgba(0,0,0,0.12)", ease: "none" }, 0);
-
-      // 6. Copyright
-      tl.to(footer.querySelectorAll(".footer-copy"), { color: "rgba(0,0,0,0.35)", ease: "none" }, 0);
+      // 5. Copyright
+      tl.fromTo(
+        ".footer-copy",
+        { color: "rgba(255,255,255,0.3)" },
+        { color: "rgba(0,0,0,0.35)", ease: "none" },
+        0
+      );
     }, footer);
 
     return () => ctx.revert();

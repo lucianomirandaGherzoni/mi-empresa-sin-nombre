@@ -2,10 +2,11 @@
    FOOTER  animacion scroll-to-white con GSAP
    ========================================================================== */
 
+
 .footer-root {
   position: relative;
   overflow: hidden;
-  background-color: #000000;
+  background-color: #050509;
   padding: 5rem 1.5rem 2.5rem;
 }
 
