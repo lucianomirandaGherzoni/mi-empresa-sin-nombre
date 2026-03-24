@@ -37,7 +37,6 @@ const PaginaCartas = () => {
               transition={{ duration: 0.6 }}
               className="columna-info"
             >
-              <p className="etiqueta-seccion subtitulo-servicio">Adiós al menú plastificado</p>
               <h1 className="titulo-servicio">Tu carta siempre actualizada</h1>
               <p className="descripcion-servicio">
                 Tus clientes escanean el QR y ven el menú en segundos. Diseñado para vender más: fotos atractivas, categorías fáciles de navegar y la posibilidad de actualizar precios o productos en segundos desde tu celular.
@@ -98,7 +97,6 @@ const PaginaCartas = () => {
             transition={{ duration: 0.6 }}
             className="encabezado-centro"
           >
-            <p className="etiqueta-seccion">Planes y precios</p>
             <h2 className="titulo-seccion-principal">Elegí el plan que mejor se adapte a tu necesidad</h2>
           </motion.div>
           <div className="grilla-planes">
@@ -161,7 +159,6 @@ const PaginaCartas = () => {
             viewport={{ once: true }}
             className="encabezado-centro"
           >
-            <p className="etiqueta-seccion">Preguntas frecuentes</p>
             <h2 className="titulo-seccion-principal">Dudas comunes sobre este servicio</h2>
           </motion.div>
           <div className="lista-acordeon">
@@ -194,7 +191,6 @@ const PaginaCartas = () => {
           viewport={{ once: true }}
           className="contenedor-cta"
         >
-          <p className="etiqueta-seccion etiqueta-cta">Próximo paso</p>
           <h2 className="titulo-seccion-principal cta-titulo">¿Tenés un proyecto en mente?</h2>
           <p className="descripcion-cta">
             Contanos tu idea, el estado actual de tu negocio y qué querés lograr en los próximos meses. Con esa información armamos una propuesta sin compromiso, con pasos claros, tiempos estimados y rangos de inversión adaptados a tu realidad.

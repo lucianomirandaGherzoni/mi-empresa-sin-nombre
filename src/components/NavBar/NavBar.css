@@ -199,14 +199,14 @@
   color: var(--text-white);
 }
 
-/* Variante Outline Lila */
-.btn-outline-lila {
+/* Variante Outline Gray */
+.btn-outline-gray {
   background: transparent;
   border: 1px solid var(--color-secondary);
   color: var(--color-secondary);
 }
 
-.btn-outline-lila:hover {
+.btn-outline-gray:hover {
   background-color: var(--color-secondary);
   color: #0a0a0f;
 }

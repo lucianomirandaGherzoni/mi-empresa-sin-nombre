@@ -17,10 +17,6 @@
     margin-bottom: 4rem;
 }
 
-.cabecera-faq-estilo .etiqueta-seccion {
-    margin-bottom: 0.75rem;
-}
-
 .titulo-seccion-faq {
     font-size: var(--text-3xl);
     font-weight: 300;
@@ -78,7 +74,7 @@
 }
 
 .boton-desplegable-faq:hover .circulo-icono-faq {
-    border-color: rgba(181, 162, 210, 0.4);
+    border-color: rgba(161, 161, 170, 0.4);
 }
 
 .icono-faq-verde {

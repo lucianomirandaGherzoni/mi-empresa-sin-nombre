@@ -74,7 +74,6 @@ const FAQ = () => {
           transition={{ duration: 0.6 }}
           className="cabecera-faq-estilo"
         >
-          <p className="etiqueta-seccion">Preguntas frecuentes</p>
           <h2 className="titulo-seccion-faq">
             Respuestas a las dudas más comunes sobre nuestros servicios
           </h2>

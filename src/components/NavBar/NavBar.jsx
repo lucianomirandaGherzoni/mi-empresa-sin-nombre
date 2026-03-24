@@ -132,7 +132,7 @@ const NavBar = () => {
 
         {/* CTA Buttons (Desktop) */}
         <div className="nav-actions desktop-only">
-          <button className="btn btn-outline-lila">Cotizar Proyecto</button>
+          <button className="btn btn-outline-gray">Cotizar Proyecto</button>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -177,25 +177,25 @@ const NavBar = () => {
               >
                 <span>Productos</span>
                 {mobileDropdownOpen
-                  ? <ChevronUp size={18} style={{ color: '#B5A2D2', transition: 'transform 0.2s' }} />
-                  : <ChevronDown size={18} style={{ color: '#B5A2D2', transition: 'transform 0.2s' }} />
+                  ? <ChevronUp size={18} style={{ color: '#A1A1AA', transition: 'transform 0.2s' }} />
+                  : <ChevronDown size={18} style={{ color: '#A1A1AA', transition: 'transform 0.2s' }} />
                 }
               </button>
               {mobileDropdownOpen && (
                 <div
                   style={{
-                    border: '1px solid #B5A2D2',
+                    border: '1px solid #A1A1AA',
                     borderRadius: '0.75rem',
                     margin: '0.25rem 0',
                     background: 'rgba(9,9,11,0.92)',
-                    boxShadow: '0 4px 16px rgba(181,162,210,0.08)',
+                    boxShadow: '0 4px 16px rgba(161,161,170,0.08)',
                     overflow: 'hidden',
                   }}
                 >
                   <Link
                     to="/landing-pages"
                     className="mobile-nav-link"
-                    style={{ display: 'block', width: '100%', textAlign: 'left', borderBottom: '1px solid rgba(181,162,210,0.12)', margin: 0 }}
+                    style={{ display: 'block', width: '100%', textAlign: 'left', borderBottom: '1px solid rgba(161,161,170,0.12)', margin: 0 }}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Sitios Web
@@ -203,7 +203,7 @@ const NavBar = () => {
                   <Link
                     to="/invitaciones"
                     className="mobile-nav-link"
-                    style={{ display: 'block', width: '100%', textAlign: 'left', borderBottom: '1px solid rgba(181,162,210,0.12)', margin: 0 }}
+                    style={{ display: 'block', width: '100%', textAlign: 'left', borderBottom: '1px solid rgba(161,161,170,0.12)', margin: 0 }}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Invitaciones
@@ -211,7 +211,7 @@ const NavBar = () => {
                   <Link
                     to="/turnos"
                     className="mobile-nav-link"
-                    style={{ display: 'block', width: '100%', textAlign: 'left', borderBottom: '1px solid rgba(181,162,210,0.12)', margin: 0 }}
+                    style={{ display: 'block', width: '100%', textAlign: 'left', borderBottom: '1px solid rgba(161,161,170,0.12)', margin: 0 }}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Turnos
@@ -219,7 +219,7 @@ const NavBar = () => {
                   <Link
                     to="/cartas"
                     className="mobile-nav-link"
-                    style={{ display: 'block', width: '100%', textAlign: 'left', borderBottom: '1px solid rgba(181,162,210,0.12)', margin: 0 }}
+                    style={{ display: 'block', width: '100%', textAlign: 'left', borderBottom: '1px solid rgba(161,161,170,0.12)', margin: 0 }}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Cartas

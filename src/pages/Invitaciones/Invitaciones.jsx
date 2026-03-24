@@ -56,7 +56,6 @@ const PaginaInvitaciones = () => {
                             transition={{ duration: 0.6 }}
                             className="columna-info"
                         >
-                            <p className="etiqueta-seccion subtitulo-servicio">Momentos que se recuerdan</p>
                             <h1 className="titulo-servicio">Tu evento empieza con una gran invitación</h1>
                             <p className="descripcion-servicio">
                                 Sorprendé a tus invitados con una invitación interactiva que gestiona tu evento por vos.
@@ -123,7 +122,6 @@ const PaginaInvitaciones = () => {
                         transition={{ duration: 0.6 }}
                         className="encabezado-centro"
                     >
-                        <p className="etiqueta-seccion">Planes y precios</p>
                         <h2 className="titulo-seccion-principal">Elegí el plan que mejor se adapte a tu necesidad</h2>
                     </motion.div>
                     <div className="grilla-planes">
@@ -187,7 +185,6 @@ const PaginaInvitaciones = () => {
                         viewport={{ once: true }}
                         className="encabezado-centro"
                     >
-                        <p className="etiqueta-seccion">Preguntas frecuentes</p>
                         <h2 className="titulo-seccion-principal">Dudas comunes sobre este servicio</h2>
                     </motion.div>
                     <div className="lista-acordeon">
@@ -222,7 +219,6 @@ const PaginaInvitaciones = () => {
                         transition={{ duration: 0.6 }}
                         className="encabezado-centro"
                     >
-                        <p className="etiqueta-seccion">Así funciona</p>
                         <h2 className="titulo-seccion-principal">Crear tu invitación es fácil</h2>
                         <p className="subtitulo-como-funciona">Un solo lugar para diseñar, compartir y organizar todo.</p>
                     </motion.div>

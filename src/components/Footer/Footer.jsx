@@ -77,6 +77,7 @@ const Footer = () => {
     <footer ref={footerRef} className="footer-root">
       {/* Relleno blanco que sube con el scroll */}
       <div ref={fillRef} className="footer-fill" />
+      <div className="footer-grid-fondo" />
 
       {/* Contenido */}
       <div className="footer-content">

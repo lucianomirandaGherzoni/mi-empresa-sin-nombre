@@ -41,7 +41,6 @@ const PaginaLandingPages = () => {
               transition={{ duration: 0.6 }}
               className="columna-info"
             >
-              <p className="etiqueta-seccion subtitulo-servicio">Diseño Web Estratégico</p>
               <h1 className="titulo-servicio">Tu negocio en internet</h1>
               <p className="descripcion-servicio">
                 Llevamos tu marca al mundo digital con una página fácil de usar y pensada para dar resultados. Ideal para que tus clientes te encuentren rápido y confíen en lo que hacés.
@@ -102,7 +101,6 @@ const PaginaLandingPages = () => {
             transition={{ duration: 0.6 }}
             className="encabezado-centro"
           >
-            <p className="etiqueta-seccion">Planes y precios</p>
             <h2 className="titulo-seccion-principal">Elegí el plan que mejor se adapte a tu necesidad</h2>
           </motion.div>
           <div className="grilla-planes">
@@ -196,7 +194,6 @@ const PaginaLandingPages = () => {
             viewport={{ once: true }}
             className="encabezado-centro"
           >
-            <p className="etiqueta-seccion">Preguntas frecuentes</p>
             <h2 className="titulo-seccion-principal">Dudas comunes sobre este servicio</h2>
           </motion.div>
           <div className="lista-acordeon">
@@ -229,7 +226,6 @@ const PaginaLandingPages = () => {
           viewport={{ once: true }}
           className="contenedor-cta"
         >
-          <p className="etiqueta-seccion etiqueta-cta">Próximo paso</p>
           <h2 className="titulo-seccion-principal cta-titulo">¿Tenés un proyecto en mente?</h2>
           <p className="descripcion-cta">
             Contanos tu idea, el estado actual de tu negocio y qué querés lograr en los próximos meses. Con esa información armamos una propuesta sin compromiso, con pasos claros, tiempos estimados y rangos de inversión adaptados a tu realidad.

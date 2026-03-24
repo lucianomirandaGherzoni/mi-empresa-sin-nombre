@@ -48,7 +48,6 @@ const PaginaTurnos = () => {
                             transition={{ duration: 0.6 }}
                             className="columna-info"
                         >
-                            <p className="etiqueta-seccion subtitulo-servicio">Sin llamadas, sin esperas</p>
                             <h1 className="titulo-servicio">Turnos online para tu negocio</h1>
                             <p className="descripcion-servicio">
                                 Tus clientes reservan online y reciben confirmación automática.<br />
@@ -114,7 +113,6 @@ const PaginaTurnos = () => {
                         transition={{ duration: 0.6 }}
                         className="encabezado-centro"
                     >
-                        <p className="etiqueta-seccion">Planes y precios</p>
                         <h2 className="titulo-seccion-principal">Elegí el plan que mejor se adapte a tu necesidad</h2>
                     </motion.div>
                     <div className="grilla-planes">
@@ -179,7 +177,6 @@ const PaginaTurnos = () => {
                         viewport={{ once: true }}
                         className="encabezado-centro"
                     >
-                        <p className="etiqueta-seccion">Preguntas frecuentes</p>
                         <h2 className="titulo-seccion-principal">Dudas comunes sobre este servicio</h2>
                     </motion.div>
                     <div className="lista-acordeon">
@@ -214,7 +211,6 @@ const PaginaTurnos = () => {
                         transition={{ duration: 0.6 }}
                     className="encabezado-beneficios encabezado-centro"
                     >
-                        <p className="etiqueta-seccion">Por qué elegir este sistema</p>
                         <h2 className="titulo-seccion-principal">Todo lo que necesitás para llenar tu agenda</h2>
                     </motion.div>
 

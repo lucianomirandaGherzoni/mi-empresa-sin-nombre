@@ -1,0 +1,169 @@
+.seccion-nuestros-proyectos {
+  position: relative;
+  padding: 5rem 0;
+  background-color: #050509;
+  overflow: hidden;
+}
+
+.contenedor-nuestros-proyectos {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.titulo-nuestros-proyectos {
+  text-align: center;
+  margin: 0 0 2rem;
+  font-size: var(--text-3xl);
+  font-weight: 300;
+  color: var(--text-white-soft);
+  letter-spacing: -0.04em;
+  font-family: var(--font-display);
+}
+
+.banner-proyectos {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto 0.9rem;
+  max-width: 1200px;
+  border-radius: 1rem;
+}
+
+.banner-proyectos::before,
+.banner-proyectos::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.banner-proyectos::before {
+  left: 0;
+  background: linear-gradient(to right, #050509 0%, rgba(5, 5, 9, 0.78) 35%, rgba(5, 5, 9, 0) 100%);
+}
+
+.banner-proyectos::after {
+  right: 0;
+  background: linear-gradient(to left, #050509 0%, rgba(5, 5, 9, 0.78) 35%, rgba(5, 5, 9, 0) 100%);
+}
+
+.track-proyectos {
+  display: flex;
+  gap: 0.9rem;
+  width: max-content;
+  will-change: transform;
+}
+
+.track-izquierda {
+  animation: desplazar-izquierda 34s linear infinite;
+}
+
+.track-derecha {
+  animation: desplazar-derecha 38s linear infinite;
+}
+
+.banner-proyectos:hover .track-proyectos {
+  animation-play-state: paused;
+}
+
+.card-proyecto {
+  position: relative;
+  width: 360px;
+  height: 210px;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  border: none;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-proyecto {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 5, 9, 0.28);
+  transition: background 0.22s ease;
+}
+
+.contenido-proyecto {
+  position: relative;
+  z-index: 2;
+  padding: 0;
+}
+
+.cta-proyecto {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(244, 244, 245, 0.65);
+  background: rgba(255, 255, 255, 0.2);
+  color: #f8fafc;
+  font-size: var(--text-xs);
+  opacity: 0;
+  transform: translateY(8px) scale(0.96);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.card-proyecto:hover .cta-proyecto {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.card-proyecto:hover .overlay-proyecto {
+  background: rgba(5, 5, 9, 0.48);
+}
+
+@keyframes desplazar-izquierda {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 0.45rem));
+  }
+}
+
+@keyframes desplazar-derecha {
+  0% {
+    transform: translateX(calc(-50% - 0.45rem));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .seccion-nuestros-proyectos {
+    padding: 4rem 0;
+  }
+
+  .banner-proyectos {
+    max-width: calc(100% - 1rem);
+  }
+
+  .banner-proyectos::before,
+  .banner-proyectos::after {
+    width: 58px;
+  }
+
+  .card-proyecto {
+    width: 290px;
+    height: 180px;
+  }
+
+  .track-izquierda {
+    animation-duration: 28s;
+  }
+
+  .track-derecha {
+    animation-duration: 32s;
+  }
+}

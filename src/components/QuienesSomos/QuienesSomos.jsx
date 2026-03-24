@@ -45,15 +45,13 @@ export function QuienesSomos() {
           transition={{ duration: 0.6 }}
           className="cabecera-quienes-somos"
         >
-          <p className="etiqueta-seccion">Quiénes somos</p>
           <h2 className="titulo-quienes-somos">
             Un equipo con roles claros y un objetivo compartido
           </h2>
           <p className="descripcion-quienes-somos">
-            Somos tres profesionales con perfiles complementarios: un desarrollador y diseñador 
-            que construye cada proyecto desde cero, y dos especialistas comerciales que entienden 
-            el mercado y conectan con cada cliente. Esa combinación es lo que nos permite ofrecer 
-            soluciones que funcionan tanto técnicamente como comercialmente.
+            Somos tres profesionales con perfiles complementarios: desarrollo y diseño,
+            estrategia comercial y relación con clientes. Juntos creamos soluciones digitales
+            que funcionan en lo técnico y en lo comercial.
           </p>
         </motion.div>
 

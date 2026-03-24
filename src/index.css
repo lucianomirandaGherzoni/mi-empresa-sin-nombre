@@ -27,9 +27,9 @@
      COLORES PRINCIPALES
      ======================================== */
   --color-primary: #FF4600;        /* Naranja vibrante para CTA */
-  --color-secondary: #B5A2D2;      /* Lila medio para acentos */
-  --color-secondary-dark: #5C2DBF; /* Lila oscuro para hover */
-  --color-secondary-light: #C4A6F0; /* Lila claro */
+  --color-secondary: #A1A1AA;      /* Lila medio para acentos */
+  --color-secondary-dark: #52525B; /* Lila oscuro para hover */
+  --color-secondary-light: #D4D4D8; /* Lila claro */
   
   /* ========================================
      COLORES DE FONDO
@@ -116,8 +116,14 @@ body {
   font-family: var(--font-body);
   min-height: 100vh;
   line-height: 1.5;
+  background-color: #050509;
   -webkit-font-smoothing: antialiased; /* Hace que la letra se vea más fina y elegante */
 }
+
+main {
+  background-color: #050509;
+}
+
 html, body {
   overflow-x: hidden;
 }

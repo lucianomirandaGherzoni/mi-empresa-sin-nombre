@@ -3,7 +3,7 @@
    ========================================================================== */
 .seccion-heroe {
     position: relative;
-    min-height: 100vh;
+    min-height: 75vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -45,7 +45,7 @@
     z-index: 1;
     pointer-events: none;
     background-color: var(--bg-dark-2);
-    background-image: radial-gradient(100% 60% at 50% 0%, rgba(181, 162, 210, 0.22) 0%, rgba(181, 162, 210, 0) 60%);
+    background-image: radial-gradient(100% 60% at 50% 0%, rgba(161, 161, 170, 0.22) 0%, rgba(161, 161, 170, 0) 60%);
 }
 
 .grid-corner {

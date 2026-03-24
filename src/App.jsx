@@ -6,8 +6,10 @@ import { NavBar } from './components/NavBar/NavBar.jsx';
 import { Footer } from './components/Footer/Footer.jsx';
 import { Hero } from './components/Hero/Hero.jsx';
 import { QuienesSomos } from './components/QuienesSomos/QuienesSomos.jsx';
+import { NuestrosProyectos } from './components/NuestrosProyectos/NuestrosProyectos.jsx';
 import { FAQ } from './components/PreguntasFrecuentes/PreguntasFrecuentes.jsx';
 import { LlamadoFinal } from './components/LlamadoFinal/LlamadoFinal.jsx';
+import { WhatsAppFloat } from './components/WhatsAppFloat/WhatsAppFloat.jsx';
 
 // --- BENTO GRID ---
 import { BentoGrid } from './components/BentoGrid/BentoGrid.jsx';
@@ -47,6 +49,7 @@ function App() {
             <Hero />
             <BentoGrid />
             <QuienesSomos />
+            <NuestrosProyectos />
             <FAQ />
             <LlamadoFinal />
           </main>
@@ -60,6 +63,7 @@ function App() {
 
       </Routes>
       <Footer />
+      <WhatsAppFloat />
     </Router>
   );
 }

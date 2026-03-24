@@ -37,7 +37,6 @@ const PaginaDesarrollo = () => {
               transition={{ duration: 0.6 }}
               className="columna-info"
             >
-              <p className="etiqueta-seccion subtitulo-servicio">Software que escala con vos</p>
               <h1 className="titulo-servicio">Sistemas hechos para tu negocio</h1>
               <p className="descripcion-servicio">
                 Cuando ninguna herramienta hace exactamente lo que necesitás, la construimos nosotros. CRMs, plataformas, APIs y apps pensadas para los procesos únicos de tu empresa.
@@ -98,7 +97,6 @@ const PaginaDesarrollo = () => {
             transition={{ duration: 0.6 }}
             className="encabezado-centro"
           >
-            <p className="etiqueta-seccion">Planes y precios</p>
             <h2 className="titulo-seccion-principal">Elegí el plan que mejor se adapte a tu necesidad</h2>
           </motion.div>
           <div className="grilla-planes">
@@ -159,7 +157,6 @@ const PaginaDesarrollo = () => {
             viewport={{ once: true }}
             className="encabezado-centro"
           >
-            <p className="etiqueta-seccion">Preguntas frecuentes</p>
             <h2 className="titulo-seccion-principal">Dudas comunes sobre este servicio</h2>
           </motion.div>
           <div className="lista-acordeon">
@@ -192,7 +189,6 @@ const PaginaDesarrollo = () => {
           viewport={{ once: true }}
           className="contenedor-cta"
         >
-          <p className="etiqueta-seccion etiqueta-cta">Próximo paso</p>
           <h2 className="titulo-seccion-principal cta-titulo">¿Tenés un proyecto en mente?</h2>
           <p className="descripcion-cta">
             Contanos tu idea, el estado actual de tu negocio y qué querés lograr en los próximos meses. Con esa información armamos una propuesta sin compromiso, con pasos claros, tiempos estimados y rangos de inversión adaptados a tu realidad.
