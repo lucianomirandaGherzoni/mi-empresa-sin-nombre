@@ -122,7 +122,7 @@ const PaginaInvitaciones = () => {
                         transition={{ duration: 0.6 }}
                         className="encabezado-centro"
                     >
-                        <h2 className="titulo-seccion-principal">Elegí el plan que mejor se adapte a tu necesidad</h2>
+                        <h2 className="titulo-seccion-principal">Elegí el plan que mejor <em className="resaltado-gris">se adapte</em> a tu necesidad</h2>
                     </motion.div>
                     <div className="grilla-planes">
 
@@ -185,7 +185,7 @@ const PaginaInvitaciones = () => {
                         viewport={{ once: true }}
                         className="encabezado-centro"
                     >
-                        <h2 className="titulo-seccion-principal">Dudas comunes sobre este servicio</h2>
+                        <h2 className="titulo-seccion-principal">Dudas comunes sobre <em className="resaltado-gris">este servicio</em></h2>
                     </motion.div>
                     <div className="lista-acordeon">
                         {preguntas.map((faq, i) => (

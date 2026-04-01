@@ -1,37 +1,41 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
-import { ArrowUpRight } from "lucide-react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { motion, useInView } from "framer-motion";
+import { ArrowUpRight, Globe, Mail, CalendarClock, UtensilsCrossed, Code2 } from "lucide-react";
 import "./BentoGrid.css";
 
 const servicios = [
   {
     id: "01",
+    icono: Globe,
     titulo: "Sitios Web",
     descripcion: "Presencia profesional que convierte visitas en clientes.",
     ruta: "/landing-pages",
   },
   {
     id: "02",
+    icono: Mail,
     titulo: "Invitaciones",
     descripcion: "Eventos memorables para compartir y confirmar con facilidad.",
     ruta: "/invitaciones",
   },
   {
     id: "03",
+    icono: CalendarClock,
     titulo: "Turnos",
     descripcion: "Agenda automática con recordatorios y disponibilidad clara.",
     ruta: "/turnos",
   },
   {
     id: "04",
+    icono: UtensilsCrossed,
     titulo: "Menú QR",
     descripcion: "Carta digital actualizable al instante desde tu negocio.",
     ruta: "/cartas",
   },
   {
     id: "05",
+    icono: Code2,
     titulo: "A Medida",
     descripcion: "Sistemas personalizados para procesos y operaciones complejas.",
     ruta: "/desarrollo",
@@ -39,30 +43,13 @@ const servicios = [
 ];
 
 const BentoGrid = () => {
-  const gridRef = useRef(null);
+  const ref = useRef(null);
+  const estaEnVista = useInView(ref, { once: true, margin: "-100px" });
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    const cards = gsap.utils.toArray('.tarjeta-proceso');
-    gsap.set(cards, { opacity: 0, y: 40 });
-    cards.forEach((card, i) => {
-      gsap.to(card, {
-        opacity: 1,
-        y: 0,
-        duration: 0.7,
-        delay: i * 0.08,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: card,
-          start: 'top 85%',
-          toggleActions: 'play none none none',
-        }
-      });
-    });
-    return () => {
-      ScrollTrigger.getAll().forEach(t => t.kill());
-    };
-  }, []);
+  const variantes = {
+    oculto: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
 
   return (
     <section id="que-hacemos" className="seccion-bento">
@@ -71,15 +58,22 @@ const BentoGrid = () => {
       <div className="contenedor-principal">
         <div className="cabecera-seccion">
           <h2 className="titulo-seccion-principal">
-            Soluciones digitales que funcionan
+            Soluciones digitales <span className="titulo-bento-gris">que funcionan</span>
           </h2>
         </div>
 
-        <div ref={gridRef} className="lista-procesos">
+        <motion.div
+          ref={ref}
+          initial="oculto"
+          animate={estaEnVista ? "visible" : "oculto"}
+          transition={{ staggerChildren: 0.1 }}
+          className="lista-procesos"
+        >
           {servicios.map((servicio, index) => {
             return (
-              <div
+              <motion.div
                 key={servicio.id}
+                variants={variantes}
                 className={`tarjeta-proceso ${index % 2 === 1 ? "alternada" : ""}`}
               >
                 <Link
@@ -87,7 +81,9 @@ const BentoGrid = () => {
                   className="enlace-proceso"
                   onClick={() => window.scrollTo(0, 0)}
                 >
-                  <div className="numero-proceso" aria-hidden="true">{servicio.id}</div>
+                  <div className="icono-proceso" aria-hidden="true">
+                    <servicio.icono width="100%" height="100%" strokeWidth={0.7} />
+                  </div>
 
                   <div className="contenido-proceso">
                     <div className="fila-titulo-proceso">
@@ -99,10 +95,10 @@ const BentoGrid = () => {
                     <p>{servicio.descripcion}</p>
                   </div>
                 </Link>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

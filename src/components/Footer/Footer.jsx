@@ -84,8 +84,8 @@ const Footer = () => {
         {/* Encabezado */}
         <div className="footer-header">
           <div className="footer-logo-wrap">
-            <span className="footer-logo footer-animatable">Origen</span>
-            <span className="footer-logo footer-logo-accent"> digital</span>
+            <span className="footer-logo footer-animatable">SUR</span>
+            <span className="footer-logo footer-logo-accent">WEB</span>
           </div>
           <p className="footer-tagline footer-animatable">
             Creamos presencia digital que conecta, convierte y crece.
@@ -174,7 +174,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="footer-bottom">
           <p className="footer-copy">
-            {String.fromCharCode(169)} {new Date().getFullYear()} Origen Digital. Todos los derechos reservados.
+            {String.fromCharCode(169)} {new Date().getFullYear()} SURWEB. Todos los derechos reservados.
           </p>
           <p className="footer-copy">Hecho con pasion en Argentina</p>
         </div>

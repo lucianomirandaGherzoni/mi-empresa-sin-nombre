@@ -1,0 +1,5 @@
+/* Clase para resaltar palabras en gris y cursiva */
+.resaltado-gris {
+  color: #888;
+  font-style: italic;
+}

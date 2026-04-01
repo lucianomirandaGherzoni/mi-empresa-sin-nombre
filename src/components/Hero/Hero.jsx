@@ -1,6 +1,4 @@
-import { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { gsap } from 'gsap';
 import { ChevronDown } from 'lucide-react';
 import { LogoMarquee } from '../LogoMarquee/LogoMarquee.jsx';
 import './Hero.css';
@@ -19,43 +17,23 @@ const variantesRevelado = {
 
 function FrasesAnimadasHero() {
     return (
-        <span className="bloque frase-hero-animada">Construida a medida.</span>
+        <motion.span
+            className="bloque frase-hero-animada"
+            variants={variantesRevelado}
+            initial="oculto"
+            animate="visible"
+            custom={1}
+        >
+            Construida a medida.
+        </motion.span>
     );
 }
 
 export function Hero() {
-    const glowRef = useRef(null);
-
-    useEffect(() => {
-        const ctx = gsap.context(() => {
-            // Blob de resplandor flota de forma orgánica e infinita
-            gsap.to(glowRef.current, {
-                x: 60,
-                y: -40,
-                scale: 1.15,
-                duration: 4,
-                ease: 'sine.inOut',
-                yoyo: true,
-                repeat: -1,
-            });
-            gsap.to(glowRef.current, {
-                rotation: 15,
-                duration: 7,
-                ease: 'sine.inOut',
-                yoyo: true,
-                repeat: -1,
-                delay: 0.5,
-            });
-        });
-        return () => ctx.revert();
-    }, []);
-
     return (
         <section className="seccion-heroe">
             <div className="fondo-gradiente" />
             <div className="grid-corner" />
-            
-            <div className="resplandor-acento" ref={glowRef} />
             
             <div className="contenedor-heroe">
                 <h1 className="titulo-principal">
@@ -67,7 +45,7 @@ export function Hero() {
                             animate="visible"
                             custom={0}
                         >
-                            Presencia digital
+                            <em>Presencia digital</em>
                         </motion.span>
                     </span>
                     <span className="mascara-texto">

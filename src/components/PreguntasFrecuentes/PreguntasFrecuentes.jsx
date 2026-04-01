@@ -75,7 +75,7 @@ const FAQ = () => {
           className="cabecera-faq-estilo"
         >
           <h2 className="titulo-seccion-faq">
-            Respuestas a las dudas más comunes sobre nuestros servicios
+            <em className="resaltado-gris">Dudas más comunes</em> sobre nuestros servicios
           </h2>
         </motion.div>
 

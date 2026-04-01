@@ -1,23 +1,23 @@
 /* ==========================================================================
-   BENTO GRID - PROCESO VISUAL (ESTILO REFERENCIA ADAPTADO A PALETA VIOLETA)
+   BENTO GRID — fondo continuo con la web; tarjetas elevadas (tono + radius)
    ========================================================================== */
 
 .seccion-bento {
   position: relative;
   padding: 5rem 1.25rem;
-  width: 90%;
+  width: 100%;
   max-width: none;
-  margin: 2.5rem auto;
-  border-radius: 1.75rem;
-  background-color: #f3f4f6;
-  border: 1px solid rgba(212, 212, 216, 0.9);
+  margin: 0 auto;
+  border-radius: 0;
+  background-color: #050509;
+  border: none;
   overflow: hidden;
 }
 
 .bento-fondo-gradiente {
   position: absolute;
   inset: 0;
-  background-color: #f3f4f6;
+  background-color: #050509;
   background-image: none;
   pointer-events: none;
   z-index: 0;
@@ -27,10 +27,10 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(to right, var(--grid-lines-light) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--grid-lines-light) 1px, transparent 1px);
+    linear-gradient(to right, var(--grid-lines) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-lines) 1px, transparent 1px);
   background-size: 48px 40px;
-  opacity: 0.5;
+  opacity: 0.45;
   -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 45%, black 0%, transparent 82%);
   mask-image: radial-gradient(ellipse 90% 70% at 50% 45%, black 0%, transparent 82%);
   pointer-events: none;
@@ -55,10 +55,21 @@
 
 .cabecera-seccion .titulo-seccion-principal {
   font-size: var(--text-3xl);
-  color: var(--text-on-light);
+  color: var(--text-white-soft);
   font-weight: 300;
   letter-spacing: -0.04em;
   font-family: var(--font-display);
+}
+
+.titulo-bento-gris {
+  color: #888;
+  font-style: italic;
+}
+
+@media (max-width: 767px) {
+  .titulo-bento-gris {
+    display: block;
+  }
 }
 
 .lista-procesos {
@@ -93,87 +104,19 @@
 
 .tarjeta-proceso {
   position: relative;
-  border-radius: 1.1rem;
-  border: 1px solid rgba(161, 161, 170, 0.2);
-  background-color: #f8fafc;
-  color: #1a1a1f;
+  border-radius: 1.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: #0c0c11;
+  color: var(--text-white-soft);
   overflow: hidden;
   transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
 }
 
-/* Efecto cuadrillé sutil sobre la tarjeta normal */
-.tarjeta-proceso::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: 
-    linear-gradient(to right, rgba(0, 0, 0, 0.02) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
-  background-size: 24px 24px;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.tarjeta-proceso::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 34%;
-  background-image:
-    linear-gradient(to right, rgba(0, 0, 0, 0.07) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.07) 1px, transparent 1px);
-  background-size: 24px 24px;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 22%, black 100%);
-  mask-image: linear-gradient(to right, transparent 0%, black 22%, black 100%);
-  pointer-events: none;
-  z-index: 1;
-}
-
 .tarjeta-proceso.alternada {
-  background-color: inherit;
+  background-color: #0c0c11;
   background-image: none;
-  color: #121219;
-  border-color: inherit;
-}
-
-.lista-procesos .tarjeta-proceso:nth-child(1) {
-  background-color: #f3f4f6;
-  border-color: rgba(212, 212, 216, 0.8);
-}
-
-.lista-procesos .tarjeta-proceso:nth-child(2) {
-  background-color: #f3f4f6;
-  border-color: rgba(212, 212, 216, 0.8);
-}
-
-.lista-procesos .tarjeta-proceso:nth-child(3) {
-  background-color: #f3f4f6;
-  border-color: rgba(212, 212, 216, 0.8);
-}
-
-.lista-procesos .tarjeta-proceso:nth-child(4) {
-  background-color: #f3f4f6;
-  border-color: rgba(212, 212, 216, 0.8);
-}
-
-.lista-procesos .tarjeta-proceso:nth-child(5) {
-  background-color: #f3f4f6;
-  border-color: rgba(212, 212, 216, 0.8);
-}
-
-/* Ajuste de cuadrillé para tarjetas alternadas */
-.tarjeta-proceso.alternada::before {
-  background-image: 
-    linear-gradient(to right, rgba(0, 0, 0, 0.025) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.025) 1px, transparent 1px);
-}
-
-.tarjeta-proceso.alternada::after {
-  background-image:
-    linear-gradient(to right, rgba(0, 0, 0, 0.085) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.085) 1px, transparent 1px);
+  color: var(--text-white-soft);
+  border-color: rgba(255, 255, 255, 0.08);
 }
 
 .enlace-proceso {
@@ -188,30 +131,15 @@
 }
 
 .numero-proceso {
-  position: absolute;
-  top: -20%;
-  left: -2%;
-  font-family: var(--font-display);
-  font-size: clamp(6rem, 12vw, 9rem);
-  line-height: 1;
-  font-weight: 700;
-  letter-spacing: -0.05em;
-  /* Color tono-sobre-tono sutil para las normales */
-  color: rgba(180, 190, 210, 0.5);
-  pointer-events: none;
-  z-index: -1;
-  user-select: none;
-}
-
-.tarjeta-proceso.alternada .numero-proceso {
-  /* Color tono-sobre-tono sutil para las lilas */
-  color: rgba(82, 82, 91, 0.15);
+  display: none;
 }
 
 .contenido-proceso {
   min-width: 0;
-  padding-left: clamp(2rem, 10vw, 5rem);
+  padding-left: 0;
   width: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .fila-titulo-proceso {
@@ -229,10 +157,16 @@
 }
 
 .icono-proceso {
-  width: 18px;
-  height: 18px;
+  position: absolute;
+  bottom: -15%;
+  right: -5%;
+  width: clamp(8rem, 16vw, 13rem);
+  height: clamp(8rem, 16vw, 13rem);
+  color: rgba(255, 255, 255, 0.045);
+  pointer-events: none;
+  z-index: 0;
+  user-select: none;
   flex-shrink: 0;
-  color: rgba(22, 22, 28, 0.9);
 }
 
 .titulo-icono-proceso h3 {
@@ -247,7 +181,7 @@
 .flecha-proceso {
   width: 18px;
   height: 18px;
-  color: rgba(22, 22, 28, 0.72);
+  color: rgba(212, 212, 216, 0.75);
   transition: transform 0.24s ease, color 0.24s ease;
 }
 
@@ -255,26 +189,25 @@
   margin: 0;
   font-size: var(--text-sm);
   line-height: 1.5;
-  color: rgba(20, 20, 28, 0.78);
+  color: var(--text-gray);
   max-width: 62ch;
 }
 
 .tarjeta-proceso:hover {
   transform: translateY(-3px);
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.22);
-  border-color: rgba(161, 161, 170, 0.75);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+  border-color: rgba(255, 255, 255, 0.14);
 }
 
 .tarjeta-proceso:hover .flecha-proceso {
   transform: translate(2px, -2px);
-  color: rgba(22, 22, 28, 0.95);
+  color: var(--text-white-soft);
 }
 
 @media (max-width: 767px) {
   .seccion-bento {
-    margin: 1.5rem auto;
+    margin: 0 auto;
     padding: 4rem 1rem;
-    border-radius: 1.25rem;
   }
 
   .lista-procesos {
@@ -304,7 +237,7 @@
 
 @media (min-width: 1024px) {
   .seccion-bento {
-    margin: 3rem auto;
+    margin: 0 auto;
     padding: 6rem 1.5rem;
   }
 

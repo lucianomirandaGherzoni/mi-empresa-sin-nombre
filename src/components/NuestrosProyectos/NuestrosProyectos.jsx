@@ -56,7 +56,7 @@ const NuestrosProyectos = () => {
   return (
     <section className="seccion-nuestros-proyectos" id="nuestros-proyectos">
       <div className="contenedor-nuestros-proyectos">
-        <h2 className="titulo-nuestros-proyectos">Proyectos que hacen crecer marcas reales</h2>
+        <h2 className="titulo-nuestros-proyectos">Lo que <em className="resaltado-gris">construimos</em></h2>
 
         <div className="banner-proyectos">
           <div className="track-proyectos track-izquierda">

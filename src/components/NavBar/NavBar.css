@@ -64,7 +64,7 @@
   /* full rounded */
 
   /* Glassmorphism */
-  background-color: rgba(5, 5, 9, 0.72);
+  background-color: #0F0D0E;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.07);
@@ -85,6 +85,15 @@
   color: var(--text-white);
   font-family: var(--font-display);
   font-weight: 200;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo-img {
+  height: 3rem;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .logo-icon {
@@ -199,6 +208,18 @@
   color: var(--text-white);
 }
 
+/* Botón Cotizar mobile */
+.btn-primary.w-full {
+  background: transparent;
+  border: 1px solid #dff646;
+  color: #dff646;
+}
+
+.btn-primary.w-full:hover {
+  background-color: #dff646;
+  color: #0a0a0f;
+}
+
 /* Variante Outline Gray */
 .btn-outline-gray {
   background: transparent;
@@ -251,9 +272,9 @@
   border-radius: var(--radius-md);
 
   /* Glassmorphism oscuro */
-  background-color: var(--overlay-dark-strong);
+  background-color: #0F0D0E;
   backdrop-filter: blur(12px);
-  border: 1px solid var(--color-secondary);
+  border: 1px solid #dff646;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 

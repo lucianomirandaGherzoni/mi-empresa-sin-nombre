@@ -44,7 +44,9 @@ const NavBar = () => {
     >
       <nav className="navbar-container">
         {/* Logo */}
-        <Link to="/" className="logo-mobile"> Origen digital</Link>
+        <Link to="/" className="logo-mobile">
+          <img src="/assets/logo-02.png" alt="SURWEB" className="navbar-logo-img" />
+        </Link>
 
         {/* Desktop Nav Items */}
         <div className="nav-links desktop-only">

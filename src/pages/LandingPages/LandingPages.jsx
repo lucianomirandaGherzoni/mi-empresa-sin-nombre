@@ -101,7 +101,7 @@ const PaginaLandingPages = () => {
             transition={{ duration: 0.6 }}
             className="encabezado-centro"
           >
-            <h2 className="titulo-seccion-principal">Elegí el plan que mejor se adapte a tu necesidad</h2>
+            <h2 className="titulo-seccion-principal">Elegí el plan que mejor <em className="resaltado-gris">se adapte</em> a tu necesidad</h2>
           </motion.div>
           <div className="grilla-planes">
 
@@ -194,7 +194,7 @@ const PaginaLandingPages = () => {
             viewport={{ once: true }}
             className="encabezado-centro"
           >
-            <h2 className="titulo-seccion-principal">Dudas comunes sobre este servicio</h2>
+            <h2 className="titulo-seccion-principal">Dudas comunes sobre <em className="resaltado-gris">este servicio</em></h2>
           </motion.div>
           <div className="lista-acordeon">
             {preguntas.map((faq, i) => (
@@ -226,7 +226,7 @@ const PaginaLandingPages = () => {
           viewport={{ once: true }}
           className="contenedor-cta"
         >
-          <h2 className="titulo-seccion-principal cta-titulo">¿Tenés un proyecto en mente?</h2>
+          <h2 className="titulo-seccion-principal cta-titulo">¿Tenés <em className="resaltado-gris">un proyecto</em> en mente?</h2>
           <p className="descripcion-cta">
             Contanos tu idea, el estado actual de tu negocio y qué querés lograr en los próximos meses. Con esa información armamos una propuesta sin compromiso, con pasos claros, tiempos estimados y rangos de inversión adaptados a tu realidad.
           </p>

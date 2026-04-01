@@ -46,7 +46,7 @@ export function QuienesSomos() {
           className="cabecera-quienes-somos"
         >
           <h2 className="titulo-quienes-somos">
-            Un equipo con roles claros y un objetivo compartido
+            Un equipo con un <em className="resaltado-gris">objetivo compartido</em>
           </h2>
           <p className="descripcion-quienes-somos">
             Somos tres profesionales con perfiles complementarios: desarrollo y diseño,
@@ -64,22 +64,19 @@ export function QuienesSomos() {
           <div className="tarjeta-quienes">
             <h3>Comunicación clara</h3>
             <p>
-              Hablamos sin tecnicismos. En cada etapa del proyecto sabés qué se está haciendo, 
-              por qué y cuánto cuesta. Sin sorpresas.
+              Sabemos que el mundo digital puede ser confuso. Por eso te explicamos cada decisión en palabras simples.
             </p>
           </div>
           <div className="tarjeta-quienes">
             <h3>Soluciones a medida</h3>
             <p>
-              Cada negocio es distinto y lo tratamos como tal. Escuchamos, analizamos 
-              y construimos una solución que responde a tus necesidades reales, no a una plantilla genérica.
+              Cada proyecto arranca desde cero. Escuchamos, analizamos y construimos lo que tu negocio realmente necesita.
             </p>
           </div>
           <div className="tarjeta-quienes">
             <h3>Presencia a largo plazo</h3>
             <p>
-              El trabajo no termina con la entrega. Estamos disponibles para acompañarte, 
-              proponer mejoras y asegurarnos de que tu presencia digital siga creciendo.
+              El lanzamiento es el comienzo. Después seguimos activos para ajustar, mejorar y acompañarte mientras tu negocio crece.
             </p>
           </div>
         </motion.div>
