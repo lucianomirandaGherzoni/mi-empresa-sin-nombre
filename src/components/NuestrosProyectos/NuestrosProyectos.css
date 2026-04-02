@@ -16,10 +16,13 @@
   text-align: center;
   margin: 0 0 2rem;
   font-size: var(--text-3xl);
-  font-weight: 300;
-  color: var(--text-white-soft);
-  letter-spacing: -0.04em;
+  font-weight: 500;
+  letter-spacing: -0.02em;
   font-family: var(--font-display);
+  background: linear-gradient(90deg, #ffffff 0%, #4a4a4a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .banner-proyectos {

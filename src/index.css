@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   /* ========================================
      TIPOGRAFÍA
      ======================================== */
-  --font-display: "Zalando Sans Expanded", sans-serif;
-  --font-body: "Zalando Sans Expanded", sans-serif;
+  --font-display: "Montserrat", sans-serif;
+  --font-body: "Montserrat", sans-serif;
 
   /* ========================================
      ESCALA TIPOGRÁFICA FLUIDA
@@ -26,10 +27,12 @@
   /* ========================================
      COLORES PRINCIPALES
      ======================================== */
-  --color-primary: #FF4600;        /* Naranja vibrante para CTA */
-  --color-secondary: #A1A1AA;      /* Lila medio para acentos */
-  --color-secondary-dark: #52525B; /* Lila oscuro para hover */
-  --color-secondary-light: #D4D4D8; /* Lila claro */
+  --color-accent: #dff646;         /* Amarillo-verde acento principal */
+  --color-accent-muted: rgba(223, 246, 70, 0.35); /* Acento con transparencia */
+  --color-secondary: #A1A1AA;      /* Gris medio para acentos */
+  --color-secondary-dark: #52525B; /* Gris oscuro para hover */
+  --color-secondary-light: #D4D4D8; /* Gris claro */
+  --color-whatsapp: #25D366;       /* Verde WhatsApp */
   
   /* ========================================
      COLORES DE FONDO

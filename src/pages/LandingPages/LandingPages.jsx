@@ -101,7 +101,7 @@ const PaginaLandingPages = () => {
             transition={{ duration: 0.6 }}
             className="encabezado-centro"
           >
-            <h2 className="titulo-seccion-principal">Elegí el plan que mejor <em className="resaltado-gris">se adapte</em> a tu necesidad</h2>
+            <h2 className="titulo-seccion-principal">Elegí el plan que mejor <em className="resaltado-gris">adapte</em> a tu necesidad</h2>
           </motion.div>
           <div className="grilla-planes">
 
@@ -226,7 +226,7 @@ const PaginaLandingPages = () => {
           viewport={{ once: true }}
           className="contenedor-cta"
         >
-          <h2 className="titulo-seccion-principal cta-titulo">¿Tenés <em className="resaltado-gris">un proyecto</em> en mente?</h2>
+          <h2 className="titulo-seccion-principal cta-titulo">¿Tenés un <em className="resaltado-gris">proyecto</em> en mente?</h2>
           <p className="descripcion-cta">
             Contanos tu idea, el estado actual de tu negocio y qué querés lograr en los próximos meses. Con esa información armamos una propuesta sin compromiso, con pasos claros, tiempos estimados y rangos de inversión adaptados a tu realidad.
           </p>

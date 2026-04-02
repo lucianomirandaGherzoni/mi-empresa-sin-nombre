@@ -113,7 +113,7 @@ const PaginaTurnos = () => {
                         transition={{ duration: 0.6 }}
                         className="encabezado-centro"
                     >
-                        <h2 className="titulo-seccion-principal">Elegí el plan que mejor <em className="resaltado-gris">se adapte</em> a tu necesidad</h2>
+                        <h2 className="titulo-seccion-principal">Elegí el plan que mejor <em className="resaltado-gris">adapte</em> a tu necesidad</h2>
                     </motion.div>
                     <div className="grilla-planes">
 

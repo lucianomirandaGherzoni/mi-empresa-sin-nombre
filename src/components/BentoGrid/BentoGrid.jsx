@@ -58,7 +58,7 @@ const BentoGrid = () => {
       <div className="contenedor-principal">
         <div className="cabecera-seccion">
           <h2 className="titulo-seccion-principal">
-            Soluciones digitales <span className="titulo-bento-gris">que funcionan</span>
+            Soluciones digitales que <span className="titulo-bento-gris">funcionan</span>
           </h2>
         </div>
 
@@ -84,14 +84,9 @@ const BentoGrid = () => {
                   <div className="icono-proceso" aria-hidden="true">
                     <servicio.icono width="100%" height="100%" strokeWidth={0.7} />
                   </div>
-
+                  <ArrowUpRight className="flecha-proceso" />
                   <div className="contenido-proceso">
-                    <div className="fila-titulo-proceso">
-                      <div className="titulo-icono-proceso">
-                        <h3>{servicio.titulo}</h3>
-                      </div>
-                      <ArrowUpRight className="flecha-proceso" />
-                    </div>
+                    <h3>{servicio.titulo}</h3>
                     <p>{servicio.descripcion}</p>
                   </div>
                 </Link>

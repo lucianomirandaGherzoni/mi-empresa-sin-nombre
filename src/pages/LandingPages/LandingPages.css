@@ -177,10 +177,13 @@
 
 .encabezado-centro .titulo-seccion-principal {
     font-size: var(--text-3xl);
-    font-weight: 300;
-    color: #fff;
+    font-weight: 500;
     letter-spacing: -0.03em;
     font-family: var(--font-display);
+    background: linear-gradient(90deg, #ffffff 0%, #4a4a4a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .grilla-planes {
@@ -428,8 +431,10 @@
     font-weight: 300;
     letter-spacing: -0.04em;
     margin-bottom: 1rem;
-    font-family: var(--font-display);
-}
+    font-family: var(--font-display);    background: linear-gradient(90deg, #ffffff 0%, #4a4a4a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;}
 
 .descripcion-cta {
     color: #a1a1aa;

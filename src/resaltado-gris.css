@@ -1,5 +1,7 @@
-/* Clase para resaltar palabras en gris y cursiva */
+/* Resaltado de palabras clave en títulos */
 .resaltado-gris {
-  color: #888;
+  color: var(--color-accent);
+  -webkit-text-fill-color: var(--color-accent);
   font-style: italic;
+  font-weight: 300;
 }

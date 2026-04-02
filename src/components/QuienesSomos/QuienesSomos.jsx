@@ -46,7 +46,7 @@ export function QuienesSomos() {
           className="cabecera-quienes-somos"
         >
           <h2 className="titulo-quienes-somos">
-            Un equipo con un <em className="resaltado-gris">objetivo compartido</em>
+            Un equipo con un <em className="resaltado-gris">objetivo</em> compartido
           </h2>
           <p className="descripcion-quienes-somos">
             Somos tres profesionales con perfiles complementarios: desarrollo y diseño,

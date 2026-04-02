@@ -274,7 +274,7 @@
   /* Glassmorphism oscuro */
   background-color: #0F0D0E;
   backdrop-filter: blur(12px);
-  border: 1px solid #dff646;
+  border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
