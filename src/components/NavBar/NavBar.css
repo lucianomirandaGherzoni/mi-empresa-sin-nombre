@@ -211,12 +211,12 @@
 /* Botón Cotizar mobile */
 .btn-primary.w-full {
   background: transparent;
-  border: 1px solid #dff646;
-  color: #dff646;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
 }
 
 .btn-primary.w-full:hover {
-  background-color: #dff646;
+  background-color: var(--color-accent);
   color: #0a0a0f;
 }
 
