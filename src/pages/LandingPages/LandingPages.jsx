@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, Plus, Minus } from "lucide-react";
-import { Link } from "react-router-dom";
 import "./LandingPages.css";
 
 const preguntas = [
@@ -43,7 +42,7 @@ const PaginaLandingPages = () => {
             >
               <h1 className="titulo-servicio">Tu negocio en internet</h1>
               <p className="descripcion-servicio">
-                Llevamos tu marca al mundo digital con una página fácil de usar y pensada para dar resultados. Ideal para que tus clientes te encuentren rápido y confíen en lo que hacés.
+                Una página fácil de usar, pensada para dar resultados. Ideal para que tus clientes te encuentren rápido y confíen en lo que hacés.
               </p>
               <ul className="lista-detalles">
                 <li className="item-detalle">
@@ -113,20 +112,24 @@ const PaginaLandingPages = () => {
               transition={{ duration: 0.6, delay: 0 }}
               className="tarjeta-plan"
             >
-              <h3 className="nombre-plan">Web Esencial</h3>
-              <p className="desc-plan">Landing pages y sitios web simples para presentar tu negocio y captar clientes.</p>
-              <div className="precio-plan">
+              <h3 className="nombre-plan">Landing Page</h3>
+              <p className="desc-plan">Tu negocio en internet, Presencia online lista para captar clientes.
+
+
+              </p>
+              {/*           <div className="precio-plan">
                 <span className="desde-texto">desde</span>
                 <span className="monto">$200 USD</span>
-              </div>
+              </div> */}
               <ul className="features-plan">
-                <li className="item-feature"><Check className="icono-check" />Landing page o sitio institucional de hasta 5 secciones</li>
-                <li className="item-feature"><Check className="icono-check" />Diseño responsive (mobile + desktop)</li>
-                <li className="item-feature"><Check className="icono-check" />Formulario de contacto y botón de WhatsApp</li>
-                <li className="item-feature"><Check className="icono-check" />Optimización de velocidad y SEO</li>
+                <li className="item-feature"><Check className="icono-check" />Landing page con múltiples secciones </li>
+                <li className="item-feature"><Check className="icono-check" />Diseño responsive mobile + desktop</li>
+                <li className="item-feature"><Check className="icono-check" />Formulario de contacto + botón de WhatsApp</li>
+                <li className="item-feature"><Check className="icono-check" />SEO básico + velocidad optimizada</li>
                 <li className="item-feature"><Check className="icono-check" />Entrega en 7 días hábiles</li>
+                <li className="item-feature"><Check className="icono-check" />Dominio + Hosting incluido por 1 año</li>
               </ul>
-              <button className="boton-plan gris">Consultar</button>
+              <button className="boton-plan gris">Consultar presupuesto</button>
             </motion.div>
 
             {/* — Plan Web Dinámica (destacado) — */}
@@ -138,22 +141,24 @@ const PaginaLandingPages = () => {
               className="tarjeta-plan destacado"
             >
               <div className="etiqueta-recomendado">Más elegido</div>
-              <h3 className="nombre-plan">Web Dinámica</h3>
-              <p className="desc-plan">E-commerce, tiendas online o webs con blog y contenido que cambia seguido.</p>
-              <div className="precio-plan">
+              <h3 className="nombre-plan">Tienda Online</h3>
+              <p className="desc-plan">Vendé las 24hs, desde cualquier lugar. Tu tienda online, sin complicaciones.
+
+              </p>
+              {/*         <div className="precio-plan">
                 <span className="desde-texto">desde</span>
                 <span className="monto">$350 USD</span>
-              </div>
+              </div> */}
               <ul className="features-plan">
-                <li className="item-feature"><Check className="icono-check" />E-commerce completo o sitio web con blog</li>
+                <li className="item-feature"><Check className="icono-check" />Tienda online completa con catálogo de productos</li>
                 <li className="item-feature"><Check className="icono-check" />CMS para que vos mismo edites el contenido</li>
-                <li className="item-feature"><Check className="icono-check" />Google Analytics 4 + seguimiento de objetivos</li>
-                <li className="item-feature"><Check className="icono-check" />Carrito de compras y pasarela de pagos</li>
+                <li className="item-feature"><Check className="icono-check" />Google Analytics 4 + Meta Pixel integrado</li>
+                <li className="item-feature"><Check className="icono-check" />Carrito de compras + medios de pago integrados</li>
                 <li className="item-feature"><Check className="icono-check" />Gestión de productos, categorías y stock</li>
-                <li className="item-feature"><Check className="icono-check" />SEO técnico + sitemap automático</li>
-                <li className="item-feature"><Check className="icono-check" />Soporte por 30 días post-entrega</li>
+                <li className="item-feature"><Check className="icono-check" />SEO técnico configurado para aparecer en Google</li>
+                <li className="item-feature"><Check className="icono-check" />Soporte técnico por 30 días post-entrega</li>
               </ul>
-              <button className="boton-plan primario">Consultar</button>
+              <button className="boton-plan primario">Consultar presupuesto</button>
             </motion.div>
 
             {/* — Plan A medida — */}
@@ -165,20 +170,22 @@ const PaginaLandingPages = () => {
               className="tarjeta-plan"
             >
               <h3 className="nombre-plan">Web Institucional</h3>
-              <p className="desc-plan">Sitios con múltiples funcionalidades, áreas privadas, integraciones y escala real.</p>
-              <div className="precio-plan">
+              <p className="desc-plan">Una web a la altura de tu empresa. Escalable, integrada y hecha para crecer.
+
+              </p>
+              {/*        <div className="precio-plan">
                 <span className="monto cotizar">A cotizar</span>
-              </div>
+              </div> */}
               <ul className="features-plan">
-                <li className="item-feature"><Check className="icono-check" />Arquitectura de múltiples páginas y secciones</li>
-                <li className="item-feature"><Check className="icono-check" />CMS avanzado + roles y permisos de usuario</li>
-                <li className="item-feature"><Check className="icono-check" />Google Analytics 4 + Tag Manager + eventos a medida</li>
-                <li className="item-feature"><Check className="icono-check" />Integraciones con CRMs, ERP o APIs externas</li>
-                <li className="item-feature"><Check className="icono-check" />Sistema de autenticación y área privada</li>
-                <li className="item-feature"><Check className="icono-check" />Infraestructura escalable en la nube</li>
-                <li className="item-feature"><Check className="icono-check" />Relevamiento, diseño UX y documentación incluidos</li>
+                <li className="item-feature"><Check className="icono-check" />Sitio multipágina con estructura profesional</li>
+                <li className="item-feature"><Check className="icono-check" />CMS avanzado + roles y permisos por usuario</li>
+                <li className="item-feature"><Check className="icono-check" />Google Analytics 4 + Meta Pixelo</li>
+                <li className="item-feature"><Check className="icono-check" />Integraciones con APIs externas</li>
+                <li className="item-feature"><Check className="icono-check" />Área privada con sistema de autenticación</li>
+                <li className="item-feature"><Check className="icono-check" />Infraestructura escalable lista para crecer</li>
+                <li className="item-feature"><Check className="icono-check" />Relevamiento + diseño UX + documentación incluida</li>
               </ul>
-              <button className="boton-plan gris">Pedir presupuesto</button>
+              <button className="boton-plan gris">Consultar presupuesto</button>
             </motion.div>
 
           </div>
@@ -226,13 +233,24 @@ const PaginaLandingPages = () => {
           viewport={{ once: true }}
           className="contenedor-cta"
         >
-          <h2 className="titulo-seccion-principal cta-titulo">¿Tenés un <em className="resaltado-gris">proyecto</em> en mente?</h2>
-          <p className="descripcion-cta">
-            Contanos tu idea, el estado actual de tu negocio y qué querés lograr en los próximos meses. Con esa información armamos una propuesta sin compromiso, con pasos claros, tiempos estimados y rangos de inversión adaptados a tu realidad.
-          </p>
-          <div className="acciones-cta">
-            <button className="boton-primario efecto-shimmer grande">Agendar Consulta Gratis</button>
-            <Link to="/" className="link-volver">Volver al inicio</Link>
+          <div className="encabezado-centro" style={{ marginBottom: "2rem" }}>
+            <h2 className="titulo-seccion-principal">Tu web, siempre <em className="resaltado-gris">activa y en orden</em></h2>
+            <p className="descripcion-cta" style={{ marginBottom: 0 }}>Un servicio mensual para que no tengas que preocuparte por nada técnico.</p>
+          </div>
+
+          {/* MANTENIMIENTO */}
+          <div className="tarjeta-mantenimiento">
+            <div className="mantenimiento-encabezado">
+              <span className="mantenimiento-badge">Servicio adicional</span>
+              <h3 className="mantenimiento-titulo">Plan de Mantenimiento Web</h3>
+              <p className="mantenimiento-subtitulo">Tu web siempre activa, sin preocupaciones.</p>
+            </div>
+            <ul className="mantenimiento-items">
+              <li className="mantenimiento-item"><Check className="icono-check" />Actualizaciones de contenido</li>
+              <li className="mantenimiento-item"><Check className="icono-check" />Monitoreo de rendimiento</li>
+              <li className="mantenimiento-item"><Check className="icono-check" />Soporte técnico mensual</li>
+              <li className="mantenimiento-item"><Check className="icono-check" />Backups periódicos</li>
+            </ul>
           </div>
         </motion.div>
       </section>
